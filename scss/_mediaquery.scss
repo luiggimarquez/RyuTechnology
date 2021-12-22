@@ -1,0 +1,728 @@
+@media screen and (min-width:769px) and (max-width: 1200px){ /*Modificacion para pantalla desktop standard y ipad Pro*/
+
+    .bodyPrincipal{ /* Fondo azul para todas las páginas y estilo de letra */
+
+        background-image: linear-gradient(to left bottom, #044bb5, #006bc2, #3889c9, #68a4cd, #9abed1);
+        font-family:'Abhaya Libre', serif;
+    }
+    /******Index.html*********/
+
+    .seccionPrincipal{
+
+        height: 100%;
+         
+        p{
+            width: 90%;
+            margin: 15px 5px 50px 5px;
+        }
+    }
+
+    .contenedorGridSeccion{
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1.5fr;
+
+        .serviciosUno{
+
+            grid-area: 1 / 1 / 2 / 3;
+            width:100%; 
+        }
+        
+        .serviciosDos{
+            
+            grid-area: 1 / 3 / 2 / 5;
+            width:100%; 
+        }
+        
+        .serviciosTres{
+    
+            width:100%;
+            grid-area: 2 / 1 / 3 / 3;
+        }
+        
+        .serviciosCuatro{
+    
+            width:100%;
+            grid-area: 2 / 3 / 3 / 5;
+        }
+    }
+    
+    .seccionAside{
+
+        width: 110%;
+        justify-content:space-between;
+    }
+
+    // *********** Empresa.html *********/
+
+    .imgEmpresa p {
+
+        margin-top: 50px;
+    }
+
+    .seccionPrincipalGeneral{
+
+        margin-bottom: 100px;
+    }
+    
+    //Proyectos /
+
+    .seccionPrincipalGeneral2 p {
+
+        margin: 25px 5px 35px 40px;
+        text-align: center;
+    }
+
+    //Partners*/
+
+    .seccionPartner{
+
+        height: fit-content;
+    }
+
+    //******** Iframe del mapa de ubicación y dirección contacto.hmtl ****** */
+
+    .mapaIframe iframe{ /* Para hacer temporalmente responsive el mapa en contacto.html */
+
+        width: 90%;
+    }
+
+    .mapaDatos p{
+
+        margin: 2rem;
+    }
+
+    .AlineacionDatos h3{
+
+        margin: 2rem;
+    }
+
+    .navbar-light {
+
+        .navbar-nav{
+        
+            .nav-link, #colorMenu,.nav-link.active { /*Color de texto para menu nav bootstrap */
+
+                color: $textoBlanco;
+            }
+        }
+
+        .navbar-brand{
+
+            color:$textoBlanco;
+        }
+    }
+    
+    .footerSecundario {
+
+        .contenedorFooterSecundario #estiloFooterNav{
+        
+            color: $textoBlanco;
+        }
+
+        li{
+    
+            a{ /* Estilos para las opciones del menú del footerSecundario */
+    
+                padding: 5px; /* Este padding coloca separación entre los elementos */
+                margin:0 20px;
+            }
+        }
+    }
+}
+//Modificacion para ipad mini - tablets
+
+@media only screen and (min-width: 670px) and (max-width: 768px){
+
+    .bodyPrincipal{ /* Fondo azul para todas las páginas y estilo de letra */
+
+        background-image: linear-gradient(to bottom, #001dde, #0034e2, #0046e5, #0054e6, #1762e6, #2171e9, #3280eb, #468eec, #5ca1ef, #77b4f1, #94c6f1, #b3d7f2);
+    }
+
+    .navbar-light{
+        
+        .navbar-nav{
+        
+            .nav-link, .nav-link.active { /*Color de texto para menu nav bootstrap */
+            
+            color: $textoBlanco;
+            }
+        }
+        .navbar-brand, #colorMenu{
+
+            color: $textoBlanco;
+        }
+    }
+
+    .footerSecundario .contenedorFooterSecundario #estiloFooterNav {
+
+        color: $textoBlanco;
+    }
+
+    .carousel-inner {
+
+        margin: 10px 0 10px 0;
+    }
+
+    .seccionAlineacion{ /* sección Servicios del index, esta clase alinea los elementos a un lado del otro*/
+
+        display:flex;
+        width:100%;
+        flex-wrap: wrap;
+    }
+
+    .contenedorGridSeccion{
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width:100%;
+        place-items: center;
+        text-align: center;
+    }
+    
+    .serviciosUno{
+
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    
+    .serviciosDos{
+        
+        grid-area: 1 / 3 / 2 / 5;
+    }
+    
+    .serviciosTres{
+
+        grid-area: 2 / 1 / 3 / 3;
+    }
+    
+    .serviciosCuatro{
+
+        grid-area: 2 / 3 / 3 / 5;
+    }
+
+    .serviciosUno, .serviciosDos, .serviciosTres, .serviciosCuatro{
+
+        width: 100%;
+
+        p{
+            width: 75%;
+        }
+    }
+
+    .seccionPrincipal p, .seccionAside p{ /*Estilo inicial para una caja de fondo blanco para el texto*/
+    
+        width: 80%;
+        margin: 30px 20px 50px 20px;
+    }
+    
+    .seccionAside{ /* Seccion Parterns lateral del index*/
+
+        width: 100%;
+        margin: 0px;
+    }
+       
+    .imgAside{
+
+        display: none;
+    }
+    
+    .imgQuery{ /*Imagen para sustituacion del Aside cuando se usen Queries*/
+    
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin: 0px;
+    }
+    /* *********** Empresa.html *********/
+
+    .imgEmpresa {
+
+       flex-direction: column;
+       
+       img{
+            width: 98%;
+        }
+
+        p {
+            width: 80%;
+        }
+    }
+ 
+    .seccionPrincipalGeneral{
+
+        margin-bottom: 185px;
+    }
+    
+    /*proyectos*/
+
+    .seccionPrincipalGeneral2{
+    
+        img{
+            margin: 30px 0 0 0;
+        }
+
+        p{
+            width: 70%;
+            padding: 10px;
+            text-align: center;
+        }
+    }
+
+    /* Partners*/
+
+    .flexPartner p{
+
+        width: 50%;
+    }
+
+    .seccionPartner{
+
+        height: fit-content;
+    }
+
+    //************** Sección del iframe del mapa de ubicación y dirección ************************* */
+
+    .mapaContacto{  /* Class del div para organizar el iframe del mapa y datos en contacto.html */
+
+        flex-direction: column;
+    }
+
+    .mapaIframe iframe{ /* Para hacer temporalmente responsive el mapa en contacto.html */
+
+        width: 90%;
+    }
+
+    .mapaDatos p{
+        
+        margin: 2rem;
+        width: 70%;
+    }
+
+    .AlineacionDatos h3{
+     
+        margin: 2rem;
+    }
+
+    //******** formulario ********/
+
+    .formularioContacto{ /* Formulario en contacto.html */
+
+        width:700px;
+        padding:16px;
+        margin:auto;
+
+        input[type="text"], input[type="email"],
+        input[type="tel"]{/* Estilo y posicion  para los elementos del formulario */
+        
+            margin: 5px 0 0 50px;
+        }
+
+        textarea{  /* Área de texto para la consulta en contacto.html */
+
+            width:550px;		
+            margin:20px 0 0 50px;
+        }
+
+        button[type="submit"], input[type="reset"]{  /* Estilo y posición  para los botones del formulario */
+    
+            width:135px;
+            margin:32px 0 0 115px;
+        }
+    }
+
+    .navbar-light {
+
+        .navbar-nav{
+        
+            .nav-link, #colorMenu,.nav-link.active { /*Color de texto para menu nav bootstrap */
+
+                color: $textoBlanco;
+            }
+        }
+
+        .navbar-brand{
+
+            color: $textoBlanco;
+        }
+    }
+    
+    #estiloFooterNav{
+        
+        color: $textoBlanco;
+    }
+
+    .footerSecundario{
+    
+        li a{ /* Estilos para las opciones del menú del footerSecundario */
+            
+            padding: 5px; /* Este padding coloca separación entre los elementos */
+            margin:20px;
+        }    
+    }
+}
+
+@media only screen and (max-width: 669px){ /** pantallas de celulares optimizando para iphone y samsung comunes */
+
+    .bodyPrincipal{ /* Fondo azul para todas las páginas y estilo de letra */
+
+        background: #1827FF;
+        background: -moz-linear-gradient(45deg, #1827FF 0%, #2388CB 49%, #3A3BD5 100%);
+        background: -webkit-linear-gradient(45deg, #1827FF 0%, #2388CB 49%, #3A3BD5 100%);
+        background: linear-gradient(45deg, #1827FF 0%, #2388CB 49%, #3A3BD5 100%);
+        font-family:'Abhaya Libre', serif;
+    }
+
+    .headerPrincipal h1{ /* Título principal de la página, nombre empresa */
+
+        font-size: 2.125rem;
+    }
+
+    .alineadorLogo h1{ /*centrar H1 */
+    
+        @include flexOpcion2(flex, center,center);
+        padding-top:10px;
+        font-size: 2rem;
+    }
+
+    .menuNav ul { /* Disposión en Horizontal de la lista del menú */
+    
+        list-style-type: none;
+        display: grid;
+        place-items: center;
+    }
+
+    .navbar-light{
+        
+        .navbar-nav{
+        
+            .nav-link, .nav-link.active { /*Color de texto para menu nav bootstrap */
+            
+                color: $textoBlanco;
+            }
+        }
+        .navbar-brand, #colorMenu{
+
+            color: $textoBlanco;
+        }
+    }
+
+    .footerSecundario .contenedorFooterSecundario #estiloFooterNav {
+
+        color: $textoBlanco;
+    }
+
+    .carousel-inner {
+
+        margin: 0;
+    }
+
+    .seccionAlineacion{ /* sección Servicios del index, esta clase alinea los elementos a un lado del otro*/
+
+        display:flex;
+        width:100%;
+        flex-wrap: wrap;
+    }
+
+    .contenedorGridSeccion{
+
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width:100%;
+        place-items: center;
+    }
+
+    .serviciosUno{
+        
+        grid-area: 1 / 1 / 2 / 2; 
+    }
+    
+    .serviciosDos{
+        
+        grid-area: 2 / 1 / 3 / 2; 
+    }
+    
+    .serviciosTres{
+        
+        grid-area: 3 / 1 / 4 / 2;
+    }
+    
+    .serviciosCuatro{
+       
+        grid-area: 4 /1 / 5 / 2;
+    }
+
+    .serviciosUno, .serviciosDos, .serviciosTres, .serviciosCuatro{
+        
+        width:100%;
+        
+        p{
+            width: 90%;
+            margin: 1rem 0 1rem 0;
+        }
+    }
+
+    .seccionPrincipal{
+
+        width: 100%;
+    }
+
+
+    .seccionPrincipal p, .seccionAside p{ /*Estilo inicial para una caja de fondo blanco para el texto*/
+    
+        width: 80%;
+        margin: 50px 20px;
+    }
+     
+     .seccionAside, .seccionAside img{ /* Seccion Parterns lateral del index*/
+ 
+        width: 100%;
+        margin: 0px;
+    }
+
+    .seccionAside p{ /* Ajustar el contenido del párrafo del aside en index.html */
+     
+        margin-top:30px;
+    }
+          
+    .imgAside{ /* quitar imagen vertical del aside */
+ 
+        display: none;
+    }
+     
+    .imgQuery{ /*Imagen para sustituacion del Aside cuando se usen Queries*/
+     
+        display: flex;
+        justify-content: start;
+        margin-top: 5px;
+        width: 95%;
+    }
+      
+    .imgEmpresa { //*********** Empresa.html *********/
+
+        flex-wrap: wrap;
+        justify-content: center;
+
+        img{
+            width: 98%;
+        }
+
+        p {
+            width: 80%;
+            text-align: center;
+        }
+    }
+
+    .misionEmpresa{ /* Alineacion de mision/vision en empresa.hmtl*/
+
+        @include footerMediaQuery(column,center,center,100%);
+
+        h3{
+            width: 100%;
+            border-radius: 0px;    
+        }
+    }
+
+    // proyectos
+
+    #videoIframe iframe{
+
+        width: 100%;  
+    }
+
+    #seccionVideo{
+
+        align-items:stretch;
+
+        h2{
+            font-size: 1.25rem;
+        }
+    }
+
+    .seccionPrincipalGeneral2{
+
+        img{
+            margin: 10px 0 20px 0;
+            width: 100%;
+        }
+
+        p{
+            width: 75%;
+            margin: 20px 5px;
+            text-align: center;
+        }
+    } 
+
+    // Partners
+
+    .flexPartner{
+
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+
+        p{
+            align-self: center;
+            margin-bottom: 30px;
+            padding: 5px;
+            text-align: center;
+            width: 80%;
+        }
+    }
+
+    .seccionPartner{
+
+        height: fit-content;
+    }
+
+    // **************Contacto ************************* */
+
+    .mapaContacto{  /* Class del div para organizar el iframe del mapa y datos en contacto.html */
+
+        flex-direction: column;
+    }
+
+    .mapaIframe iframe{ /* Para hacer temporalmente responsive el mapa en contacto.html */
+
+        display: flex;
+        width: 90%;
+    }
+
+    .mapaDatos p{
+        
+        margin: 2rem;
+    }
+
+    .AlineacionDatos h3{
+     
+        margin: 2rem;
+    }
+
+    // formulario */
+
+    .formularioContacto{ /* Formulario en contacto.html */
+
+        width:300px;
+        padding:5px;
+        margin:auto;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+
+        input{
+
+            &[type="text"], /* Estilo y posicion  para los elementos del formulario */
+            &[type="email"], &[type="tel"]{
+       
+                margin: 15px 0 0 5px;
+                padding:8px 10px;
+            }   
+        }
+
+        textarea{  /* Área de texto para la consulta en contacto.html */
+
+            width:250px;
+            margin:15px 0 0 5px;
+        }
+
+        button[type="submit"], input[type="reset"]{  /* Estilo y posición  para los botones del formulario */
+    
+            width:135px;
+            margin:32px 0 0 10px;
+            padding: 10px;
+        }
+    } //Cierre formulario
+
+    //Sección del footer del index.html, alineación de los elementos y fondo*/
+
+    .footerAlinacion{ /* Alineación de los bloques del footer uno a lado de otro */
+
+        @include footerMediaQuery(column, center, center,100%)
+    }
+
+    .contenedorMenuFooter{ /* Ubicación del menú de navegación del footer del index.html a la izquierda */
+        
+        width:100%;
+        @include flexOpcion2(flex,center,center);
+
+        li{ /*Estilos para el menu de nav*/
+        
+            padding:5px 0;
+        }
+    } 
+
+    .contenedorImagenesFooter{ /* Contenedor para alinear las imagenes del logo y RRSS en footer de index.html */
+        
+        @include footerMediaQuery(row,center,center,100%);
+    }
+    
+    .contenedorDireccionFooter{ /* Modificación de ancho de los datos de dirreción y teléfono */
+
+        width: 100%;
+        align-items: center;
+
+        p{ /* Estilo de texto de los datos de dirreción y telefono */
+
+            text-align: center;
+        }
+    }
+
+    // ******** Footer para todas las demás páginas **************/
+
+    .contenedorFooterSecundario{ /* Usado para alinear el logo y el menú en horizontal */
+
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .footerSecundario{
+
+        ul{ /* Puesta de menú del footer en horizontal y estilos */
+
+            display: grid;
+            place-items: center;
+        }
+
+        li{ /* Estilos para las opciones del menú del footerSecundario */
+
+            justify-content: center;
+            margin: 10px 0;
+        }
+    }
+
+    .navbar-light {
+
+        .navbar-nav{
+        
+            .nav-link, #colorMenu,.nav-link.active { /*Color de texto para menu nav bootstrap */
+
+                color: $textoBlanco;
+
+            }
+        }
+
+        .navbar-brand{
+
+            color:$textoBlanco;
+            font-size: 1rem;
+        }
+    }
+    
+    .footerSecundario {
+
+        .contenedorFooterSecundario #estiloFooterNav{
+        
+            color: $textoBlanco;
+        }
+
+        li{
+    
+            a{ /* Estilos para las opciones del menú del footerSecundario */
+    
+                padding: 5px; /* Este padding coloca separación entre los elementos */
+                margin:15px;
+            }
+        }
+    }
+}//cierre media query celular

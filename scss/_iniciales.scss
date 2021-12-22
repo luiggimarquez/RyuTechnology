@@ -1,0 +1,26 @@
+*{
+    margin:0px; /* formateo inicial de los margenes*/
+    padding: 0px;
+    box-sizing: border-box;   
+}
+
+.bodyPrincipal{ /* Fondo azul para todas las páginas y estilo de letra*/
+
+    background-image: linear-gradient(to right top, #265fb5, #4575c3, #608bd1, #7aa1df, #95b8ec);
+    font-family:'Abhaya Libre', serif;
+}
+
+h2, h3, h4{ /*Estilos por defectos para los titulos de toda la página*/
+    
+    text-align: center;
+    size:1.5625rem;
+    font-weight:700;
+    background-color: #143beb7c;
+    background: rgb(0,20,36);
+    background: linear-gradient(90deg, rgba(0,20,36,1) 0%,
+     rgba(20,16,161,0.8911939775910365) 32%, rgba(8,8,125,0.773546918767507) 
+     48%, rgba(6,71,162,1) 64%, rgba(56,4,200,1) 86%, rgba(0,212,255,1) 100%);
+    color:rgb(255, 255, 255);
+    width: 100%;
+    margin-bottom: 0px;
+}

@@ -1,0 +1,195 @@
+.footerPrincipal{/*Seccion del footer del Index, alineacion de los elementos y fondo*/
+
+    background-color:rgba(0, 0, 139, 0.651) ;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+
+    .h3{ /* Separación para los títulos del footer*/
+
+        padding-top: 2px;
+        width:100%;
+        background: #1C6EA4;
+        background: -moz-linear-gradient(top, #1C6EA4 0%, #2388CB 48%, #144E75 100%);
+        background: -webkit-linear-gradient(top, #1C6EA4 0%, #2388CB 48%, #144E75 100%);
+        background: linear-gradient(to bottom, #260eaf 0%, #2388CB 48%, #030836 100%);
+    }
+
+    .footerAlinacion{ /*Alineacion de los bloques del footer uno a lado de otro*/
+
+        display:flex;
+        justify-content: center;
+
+        .contenedorMenuFooter{ /*ubicacion del menú de navegacion del footer del Index a la izquierda*/
+
+            width:20%;
+            text-align: center;
+
+            a{ /*Quita el estilo de los link de los menu y da color de*/
+        
+                text-decoration: none;
+                color:rgb(95, 171, 248);
+            }
+
+            a:hover{
+        
+                color:$hovers;
+            }
+
+            li{ /*Estilos para el menu de nav*/
+        
+                list-style-type:none;
+                font-size: 16px;
+                font-weight: 700;    
+            }
+
+
+        } 
+        
+
+    }//cierre footerAlinacion
+
+    
+
+}//cierre footerPrincipal
+
+.contenedorImagenesFooter{ /* Contenedor para alienar las imagenes del logo y RRSS*/
+            
+    display: flex;
+    width:60%;
+    flex-direction: column;
+}
+
+.contenedorLogo{  /* Alineación del logo e imágenes de RRSS */
+
+    display:flex;
+    justify-content: center;
+}
+
+.contenedorRrss{
+
+    @extend .contenedorLogo;
+
+}
+
+.contenedorRrss img{ /*espacio de separacion entre logos de rrss*/
+    
+    padding: 5px;
+    height: 50px;
+    width:50px;
+}
+
+.contenedorDireccionFooter{
+    
+    width: 20%;
+
+    p{
+
+        color: $textoBlanco;
+        font-size: 14px;
+        margin: 5px;
+        text-align: center;
+    }
+}
+
+
+.bg-light { /*modificación forzada de los estilos de fondo del NAV de boostrap*/
+    
+    background-color:rgba(0, 0, 0, 0) !important;
+
+} 
+
+.navbar-toggler { /* color de fondo para el boton menu Hamburguesa - modificacion bootstrap*/
+
+    background-color: rgba(90, 129, 212, 0.575);
+}
+
+
+//* ******** Footer para todas las demás páginas **************
+
+.footerSecundario{ /* Footer para las páginas restantes (empresa, proyectos, partners,contacto) */
+
+    background-color:rgba(0, 0, 139, 0.822) ;
+    
+    @include flexOpcion2(flex, center,center);
+    width:100%;
+    flex-wrap: wrap;
+
+    ul {
+        list-style-type: none;
+        padding:0px;
+        display: flex;
+        width:auto;
+        align-self: center;
+        background-color: rgba(0, 0, 139, 0.521);
+
+        li{ /* Estilos para las opciones del menú del footerSecundario */
+
+            align-self: center;
+            margin-left: 5px;
+
+            a{ /* Estilos para las opciones del menú del footerSecundario */
+
+                padding: 5px; /* Este padding coloca separación entre los elementos */
+                text-decoration: none;
+                color:rgb(95, 171, 248);
+                font-size: 1.25rem;
+                font-weight: 800;
+            }
+
+        }
+
+    }
+
+    .contenedorFooterSecundario{ /* Usado para alinear el logo y el menú en horizontal */
+    
+        @include flexOpcion2(flex,center,center);
+        width: auto;
+
+        .logoFooter{ /* Aliación del logo del footer */
+
+            width: 70px;
+            height: 70px;
+        }
+        
+        
+        #colorOffCavas{ /*Color para sobreescribir los estilos de boostrap*/
+        
+            color:$textoBlanco; 
+        }
+        
+        #estiloFooterNav{ 
+        
+            color: $azulPrincipal;
+        } 
+        
+        #CentradoFooter{ /*Sobreescribe el centrado del menu Nav de bootstrap*/
+        
+            margin-right: 0;
+            margin-left: 0;
+        }
+        
+        .offcanvas-end { /*Sobreescribe el tamaño del menu Nav de bootstrap*/
+            
+            width: auto;
+        }
+        
+        & a:hover{
+        
+            color: $hovers;
+        }
+
+
+    }//Cierre contenedorFooterSecundario
+
+    
+
+}//Cierre footerSecundario
+
+.navbar-light .navbar-nav .nav-link{ /*cambia el color de los estilos del nav de bootstrap*/
+
+    color: $azulPrincipal;
+}
+

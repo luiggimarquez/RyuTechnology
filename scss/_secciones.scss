@@ -1,0 +1,418 @@
+.carousel-inner {
+
+    margin: 50px 0 100px 0;
+    
+    .textSlider{
+
+        font-size: 1.5rem;
+        font-weight: 800;
+        color:$textoBlanco;
+        background-color: rgba(94, 70, 180, 0.719);
+        text-justify: auto;
+        text-align: center;
+        align-self: center;
+    }
+}
+
+.seccionAlineacion{ /* sección Servicios del index, esta clase alinea los elementos a un lado del otro*/
+
+    display:flex;
+    width:auto;
+}
+
+.contenedorGridSeccion{ /*** GRID alineados de los servicios en index.html ***/
+
+    display:grid;
+    grid-template-columns: 3.125rem 1fr 1fr 0.25fr 1fr 1fr 3.125rem;
+    grid-template-rows: 1fr 1fr;
+    width:100%;
+    height: 100%;
+    place-items: center;
+}
+
+.flexServicios{ /* contenedor flex para los servicios del index.html */
+
+    @include flexOpcion(flex,column,center,center);
+    width:100%;
+    text-align: center;
+}
+
+.serviciosUno{ /*configuración para el grid de ContenedorGrid en index.html*/
+
+    grid-area: 1 / 2 / 2 / 4;
+    width:70%; 
+}
+
+.serviciosImg{ /*configuración para el grid de ContenedorGrid en index.html*/
+    
+    width: 30%;
+}
+
+.serviciosDos{ /*configuración para el grid de ContenedorGrid en index.html*/
+    
+    @extend .serviciosUno;
+    grid-area: 1 / 5 / 2 / 7;
+}
+
+.serviciosTres{ /*configuración para el grid de ContenedorGrid en index.html*/
+    
+    @extend .serviciosUno;
+    grid-area: 2 / 2 / 3 / 4;
+
+}
+
+.serviciosCuatro{ /*configuración para el grid de ContenedorGrid en index.html*/
+   
+    @extend .serviciosUno;
+    grid-area: 2 / 5 / 3 / 7;
+
+}
+
+.alieacionServicios{
+
+    text-align: center;
+}
+
+.seccionPrincipal{  /* Propuesta temporal para la Sección servicios de la empresa index.hmtl */
+
+    grid-area: principal;
+    background-color: #60A3D9;
+    background: #54609D;
+    background: -moz-linear-gradient(45deg, #54609D 0%, #3A71E5 47%, #0F3B58 100%);
+    background: -webkit-linear-gradient(45deg, #54609D 0%, #3A71E5 47%, #0F3B58 100%);
+    background: linear-gradient(45deg, #54609D 0%, #3A71E5 47%, #0F3B58 100%);
+}
+
+.seccionPrincipalGeneral{ /* Sección principal de empresa.html */
+
+    @include flexOpcion(flex,column,center,center);
+
+    p{
+        width: 60%;
+    }
+}
+
+.seccionPrincipalGeneral2{ /* Alineación elementos en partners.html */
+
+    @include flexOpcion(flex,column,center,center);
+    @include seccionGeneral(60%);
+}
+
+.seccionPrincipalGeneral3{ /* Alienación elementos "otros aliados" partners.html */
+
+    @include flexOpcion2(flex, center,center);
+    @include seccionGeneral(100%);
+}
+
+.seccionPrincipal p, .seccionAside p,
+.seccionPrincipalGeneral p, .seccionPrincipalGeneral2 p{ /*Estilo inicial para una caja de fondo blanco para el texto*/
+
+    font-size: 1.25rem;
+    background-color: hsla(231, 4%, 35%, 0.603);
+    -webkit-box-shadow: 5px 7px 8px 7px rgba(3,3,20,0.77); 
+    box-shadow: 5px 7px 8px 7px rgba(3,3,20,0.77);
+    color: $textoBlanco;
+    border-radius: 7px;
+    padding: 1rem;
+    margin:3.125rem;
+    text-align: center
+}
+
+.seccionAside{ /* Seccion Parterns lateral del index*/
+
+    @include flexOpcion(flex,column,space-between,center);
+    background-color: #003b7370;
+    width: 40%;
+    text-align: center;
+
+    img{ /* Para ubicación de una futura imagen de alto más grande -> Lateral en index.html */
+
+        width:100%;
+        height: auto; 
+        margin: 40px 0;
+    }
+
+    p{ //Ajustar el contenido del párrafo del aside en index.html
+        align-self: center;
+        margin:5px;
+    }
+}
+
+.imgQuery{ /*Imagen para sustituacion del Aside cuando se usen Queries*/
+
+    display: none;
+}
+
+.titulosEmpresa{ /*Contenedor de títulos de empresa.html*/
+
+    width: 100%;
+}
+
+.imgEmpresa{ /*Alineación de imagen y texto del contenido inicial de empresa.html*/
+
+    @include flexOpcion2(flex,left,center);
+    text-align: center;
+    width: 100%;
+
+    img{
+        border-radius:5px;
+        width: 50%;
+        margin-top:1rem;
+    }
+
+    p{
+        width: 30%;
+    }
+}
+
+.misionEmpresa{ /* Alineación de misión/visión en empresa.hmtl*/
+
+    display: flex;
+    width: 100%;
+    align-content: center;
+
+    h3{
+        width: 15%;
+        border-radius: 20px;
+        align-self: center;  
+    }
+}
+
+.contenedorCard{ /* card en empresa.html*/
+
+    background-color:transparent;
+    width:  400px;
+    height: 200px;
+    margin: 40px 20px 40px 20px;
+    perspective: 1000px;
+    overflow: visible;
+    border-radius: 7px;
+
+    &:hover .cardAbsoluta{
+
+        transform: rotatex(180deg);
+    }
+}
+
+.cardAbsoluta{
+
+    @include posicionCard(relative);
+    transition: transform 1.2s;
+    transform-style: preserve-3d;
+}
+
+.cardFrente{
+
+    @include posicionCard(absolute);
+    @include flexOpcion2(flex,center,center);
+    backface-visibility: hidden;
+
+    img{ 
+
+        border-radius: 7px;
+        opacity: 70%;
+    }
+
+    p{
+        position: absolute;
+        text-align: center;
+        color: $textoBlanco;
+        z-index: 2;
+        font-weight: 900;
+        font-size: 1.5rem;
+        align-self: center;
+    }
+}
+
+.cardAtras{
+
+    @include posicionCard(absolute);
+    @include flexOpcion2(flex,center,center);
+    background-image: url(../img/cardback.jpg);
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    border-radius: 7px;
+    padding-bottom: 40px;
+}
+
+#seccionVideo{ /*Alineación del video de proyecto.html*/
+
+    @include flexOpcion(flex,column,center,center);
+    width: 100%;
+
+    iframe{ /* Sección del video en proyectos.html */
+
+        padding: 10px;
+    }
+}
+
+.flexProyecto{ /* Alineación de los elementos de las categorías de los proyectos.html */
+
+    @extend .seccionPrincipalGeneral3;
+    text-align: center;
+
+    p{
+        width: 40%;
+    }
+
+    img{
+        margin-top: 5px;
+        transition: 0.5s;
+     
+        &:hover{
+
+            transform: scale(1.05);
+            opacity: 85%;
+        }
+    }
+}
+
+.seccionPartner{ /* Sección para organizar las imágenes de "Otros Aliados Comerciales" en partners.html */
+
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+
+    img{ /* Para dar flexibilidad a las imágenes de "Otros Aliados" partners.html */
+   
+        width: auto;
+        margin: 30px;
+        align-self: center;
+    }
+}
+
+.flexPartner{ /* contenedor Flebox para los cuatro elementos de seccionPrincipalGeneral2 en partners.html*/
+
+    @include flexOpcion2(flex,center, space-evenly);
+    text-align: center;  
+    width: 100%;
+
+    p{
+        width:40%; 
+        align-self: flex-start;
+        margin: 50px 0 30px 0;
+    }
+}
+
+.alineacionPartner{ /* Agrupación de imagen y texto para cada categoría de los 4 elementos principales en partners.hmtl*/
+   
+    @include flexOpcion(flex,column,space-evenly,center);
+    width: 40%;
+
+    h3{
+        width: fit-content;
+        padding: 0 3rem 0 3rem;
+    }
+}
+//************** Sección del iframe del mapa de ubicación y dirección ************************* */
+
+.alineadorContacto{ /* Contenedor Flex para mapas formulario y datos de dirección */
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.flexContacto{ /* Flex para acomodar mapa y los datos de dirección y teléfono */
+
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.mapaContacto{  /* Class del div para organizar el iframe del mapa y datos en contacto.html */
+
+    align-items: center;
+    margin-top: 150px;
+}
+
+.mapaIframe{ /* Para alinear el mapa en contacto.html */
+
+    overflow: hidden;
+
+    iframe{ /* Para hacer temporalmente responsive el mapa en contacto.html */
+
+        display: flex;
+        width: 75%;
+    }
+}
+
+.mapaDatos{ /* Para alinear dirección y teléfono de contacto.html y colocarlos en vertical */
+
+    flex-direction:column;
+    
+    p{
+        color: darkblue;
+        font-weight: 700;
+        font-size: 19px;
+        margin: 3rem;
+    }
+}
+ 
+.AlineacionDatos{  /* Contedor para título y parrafo en contacto.html */
+
+    display:flex;
+    width: 100%;
+
+    h3{
+        width: fit-content;
+        padding: 0 1rem 0 1rem;
+        margin: 3rem;
+    }
+    
+    p{
+        width: 100%;
+    }
+}
+//****************  Formulario ************************* */
+
+.formularioContacto{ /* Formulario en contacto.html */
+
+    width:800px;
+	padding:16px;
+	border-radius:10px;
+	margin: 100px 0 150px 0;
+    align-self: center;
+    background-color:rgba(255, 255, 255, 0.555);
+    
+    input{ 
+
+        &[type="text"], 
+        &[type="email"], &[type="tel"]{ /* Estilo y posicion  para los elementos del formulario */
+            
+            @include formulario(inline,250px,5px 0 0 83px,1px solid rgba(69, 69, 158, 0.651), 5px,#ffffff);
+            padding:3px 10px;
+        }
+    } //Cierre input
+
+    button[type="submit"], input[type="reset"]{  /* Estilo y posición  para los botones del formulario */
+    
+        @include formulario(inline-block,135px,32px 0 0 160px,1px solid #000,5px,#FFF);
+    }
+
+    button[type="submit"]:active, input[type="reset"]:active{
+
+        background-color:lightgreen;
+        color: $textoBlanco;
+    }
+
+    textarea{  /* Área de texto para la consulta en contacto.html */
+
+        @include formulario(inline,610px,20px 0 0 70px,1px solid rgba(69, 69, 158, 0.651), 3px,#ffffff);
+        height:150px;
+        resize:none;
+    }
+}
+
+
+ 
+
+
+ 
+
+
+
+
+
+

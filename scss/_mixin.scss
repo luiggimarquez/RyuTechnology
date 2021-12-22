@@ -1,0 +1,49 @@
+@mixin flexOpcion($display, $direccion,$justi, $alinea){
+
+    display: $display;
+    flex-direction: $direccion;
+    justify-content: $justi;
+    align-items: $alinea;
+}
+
+@mixin flexOpcion2($display,$justi,$alinea){
+
+    display: $display;
+    justify-content: $justi;
+    align-items: $alinea;  
+}
+
+@mixin seccionGeneral($parrafo){
+
+    flex-wrap: wrap;
+    width: 100%;
+    p{
+        width: $parrafo;
+    }
+}
+
+@mixin posicionCard($posicion){
+
+    position: $posicion;
+    width: 100%;
+    height: 100%;
+
+}
+
+@mixin formulario($display,$ancho,$margen,$borde,$bordeRadio,$fondoColor){
+
+    display:$display;
+    width: $ancho;
+    margin:$margen;
+    border:$borde;
+    border-radius: $bordeRadio;
+    background-color: $fondoColor;
+}
+
+@mixin footerMediaQuery($direccion, $justify, $align, $ancho) {
+
+    flex-direction: $direccion;
+    justify-content: $justify;
+    align-items: $align;
+    width: $ancho;
+}
