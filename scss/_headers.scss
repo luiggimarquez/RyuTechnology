@@ -2,7 +2,8 @@
 
 .headerPrincipal{ /* imagen para el header*/
 
-    background-image: url(../img/background.png);
+    //background-image: url(../img/background.png);
+    background-color: rgb(2, 2, 63);
     width: 100%;
     @include flexOpcion(flex, column, center,center);
 
@@ -11,7 +12,7 @@
         height:100px;
         text-align: center;
         padding-top: 20px;
-        color: $azulPrincipal;
+        color: $textoBlanco;
         font-size: 50px;
 
     }
@@ -21,14 +22,14 @@
         @include flexOpcion2(flex,center,center);
     
         h1{
-
+            font-family: 'Anurati Normal';
             align-self: center;
         }
         
         .logoHeader { /* logo de la empresa para el header*/
 
             width: 6.25rem;
-            filter: sepia(1);
+           // filter: sepia(1);
             margin-top: 5px;
         }
 
@@ -83,3 +84,15 @@
     color:$azulPrincipal;
 
 } //cierre navbar
+
+.navbar {
+
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-link {
+
+    padding: 0rem 1rem;
+
+}

@@ -5,6 +5,10 @@
   padding: 0px;
   box-sizing: border-box; }
 
+@font-face {
+  font-family: 'Anurati Normal';
+  src: url("../fuente/Anurati-Regular.woff") format("woff"); }
+
 .bodyPrincipal {
   /* Fondo azul para todas las páginas y estilo de letra*/
   background-image: linear-gradient(to right top, #265fb5, #4575c3, #608bd1, #7aa1df, #95b8ec);
@@ -24,7 +28,7 @@ h2, h3, h4 {
 
 .headerPrincipal {
   /* imagen para el header*/
-  background-image: url(../img/background.png);
+  background-color: #02023f;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -35,18 +39,18 @@ h2, h3, h4 {
     height: 100px;
     text-align: center;
     padding-top: 20px;
-    color: dodgerblue;
+    color: snow;
     font-size: 50px; }
   .headerPrincipal .alineadorLogo {
     display: flex;
     justify-content: center;
     align-items: center; }
     .headerPrincipal .alineadorLogo h1 {
+      font-family: 'Anurati Normal';
       align-self: center; }
     .headerPrincipal .alineadorLogo .logoHeader {
       /* logo de la empresa para el header*/
       width: 6.25rem;
-      filter: sepia(1);
       margin-top: 5px; }
   .headerPrincipal .menuNav {
     /*modificacion de estilos menú principal de navegación*/
@@ -75,6 +79,13 @@ h2, h3, h4 {
 .navbar-light .navbar-brand, .nav-link, #colorMenu {
   /*Cambio del color del boostrap de la fuente del nav*/
   color: dodgerblue; }
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.nav-link {
+  padding: 0rem 1rem; }
 
 .carousel-inner {
   margin: 50px 0 100px 0; }
@@ -221,16 +232,21 @@ h2, h3, h4 {
   width: 100%; }
   .imgEmpresa img {
     border-radius: 5px;
-    width: 50%;
-    margin-top: 1rem; }
+    width: 720px;
+    height: auto; }
   .imgEmpresa p {
-    width: 30%; }
+    width: 45%;
+    margin: 1.5rem 5rem; }
+
+.carousel-inner {
+  margin: 20px 0 100px 0; }
 
 .misionEmpresa {
   /* Alineación de misión/visión en empresa.hmtl*/
   display: flex;
   width: 100%;
-  align-content: center; }
+  align-content: center;
+  justify-content: center; }
   .misionEmpresa h3 {
     width: 15%;
     border-radius: 20px;
@@ -373,37 +389,52 @@ h2, h3, h4 {
 
 .mapaDatos {
   /* Para alinear dirección y teléfono de contacto.html y colocarlos en vertical */
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative; }
   .mapaDatos p {
-    color: darkblue;
+    color: white;
     font-weight: 700;
     font-size: 19px;
-    margin: 3rem; }
+    margin: 1.5rem;
+    z-index: 2; }
 
 .AlineacionDatos {
   /* Contedor para título y parrafo en contacto.html */
   display: flex;
-  width: 100%; }
+  width: 100%;
+  z-index: 2; }
   .AlineacionDatos h3 {
-    width: fit-content;
-    padding: 0 1rem 0 1rem;
-    margin: 3rem; }
+    width: fit-content; }
   .AlineacionDatos p {
     width: 100%; }
 
+.fondoTexto {
+  width: 90%;
+  position: absolute;
+  z-index: 1; }
+
+.fondoTexto2 {
+  position: absolute;
+  width: 80%;
+  z-index: -9;
+  transform: rotatez(140deg); }
+
+.animate__animated.animate__zoomIn {
+  --animate-delay: 60s; }
+
 .formularioContacto {
   /* Formulario en contacto.html */
-  width: 800px;
+  width: 565px;
   padding: 16px;
-  border-radius: 10px;
+  border-radius: 14px;
   margin: 100px 0 150px 0;
   align-self: center;
   background-color: rgba(255, 255, 255, 0.555); }
   .formularioContacto input[type="text"], .formularioContacto input[type="email"], .formularioContacto input[type="tel"] {
     /* Estilo y posicion  para los elementos del formulario */
     display: inline;
-    width: 250px;
-    margin: 5px 0 0 83px;
+    width: 248px;
+    margin: 5px 0 0 12px;
     border: 1px solid rgba(69, 69, 158, 0.651);
     border-radius: 5px;
     background-color: #ffffff;
@@ -412,7 +443,7 @@ h2, h3, h4 {
     /* Estilo y posición  para los botones del formulario */
     display: inline-block;
     width: 135px;
-    margin: 32px 0 0 160px;
+    margin: 32px 0 0 88px;
     border: 1px solid #000;
     border-radius: 5px;
     background-color: #FFF; }
@@ -422,13 +453,14 @@ h2, h3, h4 {
   .formularioContacto textarea {
     /* Área de texto para la consulta en contacto.html */
     display: inline;
-    width: 610px;
-    margin: 20px 0 0 70px;
+    width: 519px;
+    margin: 16px 0 0 8px;
     border: 1px solid rgba(69, 69, 158, 0.651);
     border-radius: 3px;
     background-color: #ffffff;
     height: 150px;
-    resize: none; }
+    resize: none;
+    padding: 5px; }
 
 .footerPrincipal {
   /*Seccion del footer del Index, alineacion de los elementos y fondo*/
@@ -585,8 +617,14 @@ h2, h3, h4 {
   .seccionAside {
     width: 110%;
     justify-content: space-between; }
-  .imgEmpresa p {
-    margin-top: 50px; }
+  .imgEmpresa {
+    flex-direction: column; }
+    .imgEmpresa img {
+      width: 100%; }
+    .imgEmpresa p {
+      width: 80%; }
+  .carousel-inner {
+    margin: 20px 0 40px 0; }
   .seccionPrincipalGeneral {
     margin-bottom: 100px; }
   .seccionPrincipalGeneral2 p {
@@ -598,9 +636,9 @@ h2, h3, h4 {
     /* Para hacer temporalmente responsive el mapa en contacto.html */
     width: 90%; }
   .mapaDatos p {
-    margin: 2rem; }
+    margin: 0.5rem 1rem; }
   .AlineacionDatos h3 {
-    margin: 2rem; }
+    margin: 0rem  1rem; }
   .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav #colorMenu, .navbar-light .navbar-nav .nav-link.active {
     /*Color de texto para menu nav bootstrap */
     color: snow; }
@@ -689,31 +727,38 @@ h2, h3, h4 {
     height: fit-content; }
   .mapaContacto {
     /* Class del div para organizar el iframe del mapa y datos en contacto.html */
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: 1rem; }
   .mapaIframe iframe {
     /* Para hacer temporalmente responsive el mapa en contacto.html */
     width: 90%; }
-  .mapaDatos p {
-    margin: 2rem;
-    width: 70%; }
-  .AlineacionDatos h3 {
-    margin: 2rem; }
+  .mapaDatos {
+    height: 500px; }
+    .mapaDatos p {
+      margin: 1.5rem;
+      width: 70%; }
+  .AlineacionDatos {
+    flex-direction: column;
+    align-items: center; }
+    .AlineacionDatos h3 {
+      margin: 0rem; }
   .formularioContacto {
     /* Formulario en contacto.html */
-    width: 700px;
+    width: 569px;
     padding: 16px;
-    margin: auto; }
+    margin: auto;
+    margin-bottom: 1.5rem; }
     .formularioContacto input[type="text"], .formularioContacto input[type="email"], .formularioContacto input[type="tel"] {
       /* Estilo y posicion  para los elementos del formulario */
-      margin: 5px 0 0 50px; }
+      margin: 5px 0 0 11px; }
     .formularioContacto textarea {
       /* Área de texto para la consulta en contacto.html */
-      width: 550px;
-      margin: 20px 0 0 50px; }
+      width: 513px;
+      margin: 20px 0 0 10px; }
     .formularioContacto button[type="submit"], .formularioContacto input[type="reset"] {
       /* Estilo y posición  para los botones del formulario */
       width: 135px;
-      margin: 32px 0 0 115px; }
+      margin: 23px 0 0 80px; }
   .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav #colorMenu, .navbar-light .navbar-nav .nav-link.active {
     /*Color de texto para menu nav bootstrap */
     color: snow; }
@@ -738,14 +783,13 @@ h2, h3, h4 {
     font-family: 'Abhaya Libre', serif; }
   .headerPrincipal h1 {
     /* Título principal de la página, nombre empresa */
-    font-size: 2.125rem; }
+    font-size: 1.25rem; }
   .alineadorLogo h1 {
     /*centrar H1 */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
-    font-size: 2rem; }
+    padding-top: 10px; }
   .menuNav ul {
     /* Disposión en Horizontal de la lista del menú */
     list-style-type: none;
@@ -813,7 +857,8 @@ h2, h3, h4 {
       width: 98%; }
     .imgEmpresa p {
       width: 80%;
-      text-align: center; }
+      text-align: center;
+      margin: 1.5rem 0.5rem 2rem 0.5rem; }
   .misionEmpresa {
     /* Alineacion de mision/vision en empresa.hmtl*/
     flex-direction: column;
@@ -823,6 +868,8 @@ h2, h3, h4 {
     .misionEmpresa h3 {
       width: 100%;
       border-radius: 0px; }
+  .carousel-inner {
+    margin: 20px 0 20px 0; }
   #videoIframe iframe {
     width: 100%; }
   #seccionVideo {
@@ -850,7 +897,8 @@ h2, h3, h4 {
     height: fit-content; }
   .mapaContacto {
     /* Class del div para organizar el iframe del mapa y datos en contacto.html */
-    flex-direction: column; }
+    flex-direction: column;
+    margin-top: 2rem; }
   .mapaIframe iframe {
     /* Para hacer temporalmente responsive el mapa en contacto.html */
     display: flex;
@@ -859,11 +907,14 @@ h2, h3, h4 {
     margin: 2rem; }
   .AlineacionDatos h3 {
     margin: 2rem; }
+  .fondoTexto, .fondoTexto2 {
+    display: none; }
   .formularioContacto {
     /* Formulario en contacto.html */
     width: 300px;
     padding: 5px;
     margin: auto;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center; }

@@ -1,0 +1,25 @@
+{
+  "name": "proyectoryutechnology",
+  "version": "1.0.0",
+  "description": "Version final Proyecto Ryu Technology para la clase de Desarrollo Web de CoderHouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/styles.scss css/stylesscss.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiggimarquez/RyuTechnology.git"
+  },
+  "author": "Ing. Luiggi Marquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luiggimarquez/RyuTechnology/issues"
+  },
+  "homepage": "https://github.com/luiggimarquez/RyuTechnology#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

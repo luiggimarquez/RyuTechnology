@@ -55,9 +55,22 @@
 
     // *********** Empresa.html *********/
 
-    .imgEmpresa p {
+    .imgEmpresa {
 
-        margin-top: 50px;
+        flex-direction: column;
+        
+        img{
+            width: 100%;
+        }
+ 
+        p {
+            width: 80%;
+        }
+    }
+
+    .carousel-inner { //modificacion componente bootstrap
+
+        margin: 20px 0 40px 0;
     }
 
     .seccionPrincipalGeneral{
@@ -87,14 +100,14 @@
         width: 90%;
     }
 
-    .mapaDatos p{
+    .mapaDatos p {
 
-        margin: 2rem;
+        margin: 0.5rem 1rem;
     }
 
     .AlineacionDatos h3{
 
-        margin: 2rem;
+        margin: 0rem  1rem;
     }
 
     .navbar-light {
@@ -285,6 +298,7 @@
     .mapaContacto{  /* Class del div para organizar el iframe del mapa y datos en contacto.html */
 
         flex-direction: column;
+        margin-top: 1rem;
     }
 
     .mapaIframe iframe{ /* Para hacer temporalmente responsive el mapa en contacto.html */
@@ -292,41 +306,50 @@
         width: 90%;
     }
 
-    .mapaDatos p{
-        
-        margin: 2rem;
-        width: 70%;
+    .mapaDatos{
+
+        height: 500px;
+
+        p{
+            margin: 1.5rem;
+            width: 70%;
+        }
     }
 
-    .AlineacionDatos h3{
-     
-        margin: 2rem;
-    }
+    .AlineacionDatos{
 
+        flex-direction: column;
+        align-items: center;
+
+        h3{
+            margin: 0rem;
+        }
+    }
     //******** formulario ********/
 
     .formularioContacto{ /* Formulario en contacto.html */
 
-        width:700px;
+        width:569px;
         padding:16px;
         margin:auto;
+        margin-bottom: 1.5rem;
 
         input[type="text"], input[type="email"],
         input[type="tel"]{/* Estilo y posicion  para los elementos del formulario */
         
-            margin: 5px 0 0 50px;
+            margin: 5px 0 0 11px;
         }
 
         textarea{  /* Área de texto para la consulta en contacto.html */
 
-            width:550px;		
-            margin:20px 0 0 50px;
+            width:513px;		
+            margin:20px 0 0 10px;
         }
 
         button[type="submit"], input[type="reset"]{  /* Estilo y posición  para los botones del formulario */
     
             width:135px;
-            margin:32px 0 0 115px;
+            margin:23px 0 0 80px;
         }
     }
 
@@ -374,14 +397,14 @@
 
     .headerPrincipal h1{ /* Título principal de la página, nombre empresa */
 
-        font-size: 2.125rem;
+        font-size: 1.25rem;
     }
 
     .alineadorLogo h1{ /*centrar H1 */
     
         @include flexOpcion2(flex, center,center);
         padding-top:10px;
-        font-size: 2rem;
+        //font-size: 2rem;
     }
 
     .menuNav ul { /* Disposión en Horizontal de la lista del menú */
@@ -510,6 +533,7 @@
         p {
             width: 80%;
             text-align: center;
+            margin: 1.5rem 0.5rem 2rem 0.5rem;
         }
     }
 
@@ -521,6 +545,11 @@
             width: 100%;
             border-radius: 0px;    
         }
+    }
+
+    .carousel-inner { //modificación componente de bootstrap
+
+        margin: 20px 0 20px 0;
     }
 
     // proyectos
@@ -580,6 +609,7 @@
     .mapaContacto{  /* Class del div para organizar el iframe del mapa y datos en contacto.html */
 
         flex-direction: column;
+        margin-top: 2rem;
     }
 
     .mapaIframe iframe{ /* Para hacer temporalmente responsive el mapa en contacto.html */
@@ -598,6 +628,11 @@
         margin: 2rem;
     }
 
+    .fondoTexto, .fondoTexto2{
+
+        display: none;
+    }
+
     // formulario */
 
     .formularioContacto{ /* Formulario en contacto.html */
@@ -605,6 +640,7 @@
         width:300px;
         padding:5px;
         margin:auto;
+        margin-bottom: 1rem;
         display:flex;
         flex-direction: column;
         align-items: center;

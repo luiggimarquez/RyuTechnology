@@ -156,13 +156,19 @@
 
     img{
         border-radius:5px;
-        width: 50%;
-        margin-top:1rem;
+        width: 720px;
+        height:auto;
     }
 
     p{
-        width: 30%;
+        width: 45%;
+        margin: 1.5rem 5rem;
     }
+}
+
+.carousel-inner { //modificación componente de bootstrap
+
+    margin: 20px 0 100px 0;
 }
 
 .misionEmpresa{ /* Alineación de misión/visión en empresa.hmtl*/
@@ -170,6 +176,7 @@
     display: flex;
     width: 100%;
     align-content: center;
+    justify-content: center;
 
     h3{
         width: 15%;
@@ -341,12 +348,15 @@
 .mapaDatos{ /* Para alinear dirección y teléfono de contacto.html y colocarlos en vertical */
 
     flex-direction:column;
+    position:relative;
+    
     
     p{
-        color: darkblue;
+        color: white;
         font-weight: 700;
         font-size: 19px;
-        margin: 3rem;
+        margin: 1.5rem;
+        z-index: 2;
     }
 }
  
@@ -354,24 +364,43 @@
 
     display:flex;
     width: 100%;
+    z-index: 2;
 
     h3{
         width: fit-content;
-        padding: 0 1rem 0 1rem;
-        margin: 3rem;
     }
     
     p{
         width: 100%;
     }
 }
+.fondoTexto{
+
+    width: 90%;
+    position: absolute;
+    z-index: 1;
+    
+}
+
+.fondoTexto2{
+
+    position:absolute;
+    width: 80%;
+    z-index: -9;
+    transform: rotatez(140deg);
+}
+
+.animate__animated.animate__zoomIn{
+    --animate-delay: 60s;
+
+}
 //****************  Formulario ************************* */
 
 .formularioContacto{ /* Formulario en contacto.html */
 
-    width:800px;
+    width:565px;
 	padding:16px;
-	border-radius:10px;
+	border-radius:14px;
 	margin: 100px 0 150px 0;
     align-self: center;
     background-color:rgba(255, 255, 255, 0.555);
@@ -381,14 +410,14 @@
         &[type="text"], 
         &[type="email"], &[type="tel"]{ /* Estilo y posicion  para los elementos del formulario */
             
-            @include formulario(inline,250px,5px 0 0 83px,1px solid rgba(69, 69, 158, 0.651), 5px,#ffffff);
+            @include formulario(inline,248px,5px 0 0 12px,1px solid rgba(69, 69, 158, 0.651), 5px,#ffffff);
             padding:3px 10px;
         }
     } //Cierre input
 
     button[type="submit"], input[type="reset"]{  /* Estilo y posición  para los botones del formulario */
     
-        @include formulario(inline-block,135px,32px 0 0 160px,1px solid #000,5px,#FFF);
+        @include formulario(inline-block,135px,32px 0 0 88px,1px solid #000,5px,#FFF);
     }
 
     button[type="submit"]:active, input[type="reset"]:active{
@@ -399,9 +428,10 @@
 
     textarea{  /* Área de texto para la consulta en contacto.html */
 
-        @include formulario(inline,610px,20px 0 0 70px,1px solid rgba(69, 69, 158, 0.651), 3px,#ffffff);
+        @include formulario(inline,519px,16px 0 0 8px,1px solid rgba(69, 69, 158, 0.651), 3px,#ffffff);
         height:150px;
         resize:none;
+        padding: 5px;
     }
 }
 
