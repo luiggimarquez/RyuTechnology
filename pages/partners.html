@@ -95,102 +95,175 @@
 
         <h2 class="fs-4">Nuestros Partners</h2>
 
-        <p>Ofrecemos a nuestros clientes los mejores equipos y marcas del mercado. Nos esforzamos por establecer alianzas comerciales con las marcas líderes</p>
+        <p >Ofrecemos a nuestros clientes los mejores equipos y marcas del mercado. Nos esforzamos por establecer alianzas comerciales con las marcas líderes</p>
 
-        <div class="flexPartner">
-
-            <div class="alineacionPartner">
-                
-                <h3>Cisco</h3>
-
-                <div>
-                    
-                    <a href="https://www.cisco.com/c/es_mx/products/switches/index.html#~productos" target="_blank" rel="noreferrer">
-                    <img src="../img/cisco.png" width="auto" alt="Link a cisco"></a>
-                
-                </div>
-
-            </div>
         
-            <p id="cisco">Cisco Systems, Inc. es un conglomerado de tecnología multinacional estadounidense con sede en San José, California.
-                Como parte integral del crecimiento de Silicon Valley, Cisco desarrolla, fabrica y vende hardware, software, equipos de 
-                telecomunicaciones y otros servicios y productos de alta tecnología para redes. A través de sus numerosas subsidiarias
-                adquiridas, como OpenDNS, Webex, Jabber y Jasper, Cisco se especializa en mercados tecnológicos específicos, como 
-                Internet de las cosas (IoT), seguridad de dominio y administración de energía.
-            </p>
-            
-        </div>
+        <div class="container" id="menuTab">
 
-        <div class="flexPartner">
+            <ul class="nav nav-tabs" id="myTab"  role="tablist">
 
-            <div class="alineacionPartner">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active estiloTab" id="cisco-tab" data-bs-toggle="tab" data-bs-target="#cisco1" type="button" role="tab" aria-controls="cisco1" aria-selected="true">Cisco</button>
+                </li>
 
-                <h3>Axis</h3>
+                <li class="nav-item" role="presentation">
+                  <button id="axis" class="nav-link estiloTab"  id="axis-tab" data-bs-toggle="tab" data-bs-target="#axis1" type="button" role="tab" aria-controls="axis1" aria-selected="false">Axis</button>
+                </li>
 
-                <div>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link estiloTab" id="crestron-tab" data-bs-toggle="tab" data-bs-target="#crestron1" type="button" role="tab" aria-controls="crestron1" aria-selected="false">Crestron</button>
+                </li>
 
-                    <a href="https://www.axis.com/es-es/products" target="_blank" rel="noreferrer">
-                    <img src="../img/axis.png" width="120px"  alt="Link a Axis"></a>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link estiloTab" id="avaya-tab" data-bs-toggle="tab" data-bs-target="#avaya1" type="button" role="tab" aria-controls="avaya1" aria-selected="false">Avaya</button>
+                </li>
+
+            </ul>
+
+            <div class="tab-content" id="myTabContent">
+
+                <div class="tab-pane fade show active" id="cisco1" role="tabpanel" aria-labelledby="cisco-tab">
                     
+                    <div class="flexPartner">
+
+                        <div class="alineacionPartner">
+                                        
+                            <h3>Cisco</h3>
+
+                            <div>
+                                            
+                                <a href="https://www.cisco.com/c/es_mx/products/switches/index.html#~productos" target="_blank" rel="noreferrer">
+                                <img src="../img/cisco.png" class="imgLogos" alt="Link a cisco"></a>
+                                        
+                            </div>
+                            <div >
+                                            
+                                <a href="https://www.cisco.com/c/es_mx/products/switches/index.html#~productos" target="_blank" rel="noreferrer">
+                                <img class="imgBorder" id="imgCisco" src="../img/cisco.jpg" alt="Link a cisco"></a>
+                                        
+                            </div>
+
+                        </div>
+                                
+                        <p id="cisco">Cisco Systems, Inc. es un conglomerado de tecnología multinacional estadounidense con sede en San José, California.
+                            Como parte integral del crecimiento de Silicon Valley, Cisco desarrolla, fabrica y vende hardware, software, equipos de 
+                            telecomunicaciones y otros servicios y productos de alta tecnología para redes. A través de sus numerosas subsidiarias
+                            adquiridas, como OpenDNS, Webex, Jabber y Jasper, Cisco se especializa en mercados tecnológicos específicos, como 
+                            Internet de las cosas (IoT), seguridad de dominio y administración de energía.
+                        </p>
+                                    
+                    </div>
+
                 </div>
 
-            </div>
+                <div class="tab-pane fade" id="axis1" role="tabpanel" aria-labelledby="axis-tab">
+                    
+                    <div class="flexPartner">
 
-            <p id="axis"> Axis Communications AB es un fabricante sueco de cámaras de red, control de acceso y dispositivos de audio en red
-                para las industrias de seguridad física y videovigilancia. Axis Communications desarrolla y vende cámaras de red
-                para muchas aplicaciones. Los productos incluyen cámaras PTZ, resistentes al vandalismo, térmicas, para exteriores,
-                con nitrógeno presurizado, HDTV, inalámbricas, de detección de movimiento y de barrido progresivo.
-            </p>
+                        <div class="alineacionPartner">
+            
+                            <h3>Axis</h3>
+            
+                            <div>
+            
+                                <a href="https://www.axis.com/es-es/products" target="_blank" rel="noreferrer">
+                                <img src="../img/axis.png" class="imgLogos" alt="Link a Axis"></a>
+                                
+                            </div>
+                            <div>
+            
+                                <a href="https://www.axis.com/es-es/products" target="_blank" rel="noreferrer">
+                                <img class="imgBorder" id="imgAxis" src="../img/axis.jpg" alt="Link a Axis"></a>
+                                
+                            </div>
+            
+                        </div>
+            
+                        <p> Axis Communications AB es un fabricante sueco de cámaras de red, control de acceso y dispositivos de audio en red
+                            para las industrias de seguridad física y videovigilancia. Axis Communications desarrolla y vende cámaras de red
+                            para muchas aplicaciones. Los productos incluyen cámaras PTZ, resistentes al vandalismo, térmicas, para exteriores,
+                            con nitrógeno presurizado, HDTV, inalámbricas, de detección de movimiento y de barrido progresivo. Es uno de los
+                            sistemas de CCTV más avanzados de la actualiza, totalmente digital y en alianza con sistemas de grabación como
+                            Milestone hacen uno de los sistemas de grabación y monitoreo más rubustos de la actualidad.
+                        </p>
+            
+                    </div>
 
-        </div>
+                </div>
 
-        <div class="flexPartner">
+                <div class="tab-pane fade" id="crestron1" role="tabpanel" aria-labelledby="crestron-tab">
+
+                    <div class="flexPartner">
   
-            <div class="alineacionPartner">
+                        <div class="alineacionPartner">
+            
+                            <h3>Crestron</h3>
+            
+                            <div>
+            
+                                <a href="https://www.crestron.com/Products/Featured-Solutions" target="_blank" rel="noreferrer">
+                                <img src="../img/crestron.png" class="imgLogos"  alt="Link a crestron"></a>
+                        
+                            </div>
+                            <div>
+            
+                                <a href="https://www.crestron.com/Products/Featured-Solutions" target="_blank" rel="noreferrer">
+                                <img class="imgBorder" id="imgCrestron" src="../img/crestron.jpg"  alt="Link a crestron"></a>
+                        
+                            </div>
+            
+                        </div>
+            
+                        <p id="crestron"> Crestron Electronics es una corporación multinacional privada estadounidense, fabricante y distribuidor de equipos de 
+                            integración y automatización audiovisual con sede en Rockleigh, Nueva Jersey. La empresa diseña, fabrica y distribuye 
+                            equipos para el control de la tecnología en entornos audiovisuales comerciales como espacios de reunión, salas de conferencias,
+                            aulas y auditorios; Los equipos Crestron también se utilizan para instalaciones audiovisuales residenciales de alta gama.
+                        </p>
+            
+                    </div>
 
-                <h3>Crestron</h3>
+                </div>
+                
+                <div class="tab-pane fade" id="avaya1" role="tabpanel" aria-labelledby="avaya-tab">
 
-                <div>
-
-                    <a href="https://www.crestron.com/Products/Featured-Solutions" target="_blank" rel="noreferrer">
-                    <img src="../img/crestron.png" width="auto"  alt="Link a crestron"></a>
+                    <div class="flexPartner">
+ 
+                        <div class="alineacionPartner">
+            
+                            <h3>Avaya</h3>
+                            
+                            <div>
+            
+                                <a href="https://www.avaya.com/es/devices-and-phones/" target="_blank" rel="noreferrer">
+                                <img src="../img/avaya.png" class="imgLogos"  alt="Link a avaya"></a>
+            
+                            </div>
+                            <div>
+            
+                                <a href="https://www.avaya.com/es/devices-and-phones/" target="_blank" rel="noreferrer">
+                                <img class="imgBorder" id="imgAvaya" src="../img/avaya.jpg" alt="Link a avaya"></a>
+            
+                            </div>
+                            
+                        </div>
+            
+                        <p id="avaya"> Avaya es una empresa de tecnología estadounidense que se especializa en servicios de comunicaciones 
+                            empresariales, como comunicaciones unificadas (UC) y centro de contacto (CC). Junto con los servicios locales, Avaya 
+                            ofrece comunicaciones unificadas como servicio (UCaaS), centro de contacto como servicio (CCaaS) y plataforma de 
+                            comunicaciones como servicio (CPaaS). Avaya produce y vende sus propios dispositivos, como teléfonos de escritorio, 
+                            auriculares, teléfonos de conferencia y dispositivos de videoconferencia todo en uno. Avaya es un proveedor de servicios 
+                            de comunicaciones comerciales cuyas ofertas de productos se comercializan para empresas de todos los tamaños y en todas las industrias.
+                        </p>
+            
+                    </div>
             
                 </div>
 
             </div>
 
-            <p id="crestron"> Crestron Electronics es una corporación multinacional privada estadounidense, fabricante y distribuidor de equipos de 
-                integración y automatización audiovisual con sede en Rockleigh, Nueva Jersey. La empresa diseña, fabrica y distribuye 
-                equipos para el control de la tecnología en entornos audiovisuales comerciales como espacios de reunión, salas de conferencias,
-                aulas y auditorios; Los equipos Crestron también se utilizan para instalaciones audiovisuales residenciales de alta gama.
-            </p>
-
         </div>
-
-        <div class="flexPartner">
- 
-            <div class="alineacionPartner">
-
-                <h3>Avaya</h3>
-                
-                <div>
-
-                    <a href="https://www.avaya.com/es/devices-and-phones/" target="_blank" rel="noreferrer">
-                    <img src="../img/avaya.png" width="120px"  alt="Link a avaya"></a>
-
-                </div>
-                
-            </div>
-
-            <p id="avaya"> Avaya es una empresa de tecnología estadounidense que se especializa en servicios de comunicaciones 
-                empresariales, como comunicaciones unificadas (UC) y centro de contacto (CC). Junto con los servicios locales, Avaya 
-                ofrece comunicaciones unificadas como servicio (UCaaS), centro de contacto como servicio (CCaaS) y plataforma de 
-                comunicaciones como servicio (CPaaS). Avaya produce y vende sus propios dispositivos, como teléfonos de escritorio, 
-                auriculares, teléfonos de conferencia y dispositivos de videoconferencia todo en uno. Avaya es un proveedor de servicios 
-                de comunicaciones comerciales cuyas ofertas de productos se comercializan para empresas de todos los tamaños y en todas las industrias.
-            </p>
-
-        </div>
+        
+        <a href="#menuTab"><button type="button" class="btn btn-light">Ir arriba</button></a><!--Boton para ir al inicio del Tab en Móviles-->
 
     </section>
 
@@ -213,7 +286,7 @@
                 <div class="col-12 col-sm-3 d-flex align-items-center justify-content-center">
 
                     <a href="https://www.security.honeywell.com/es/All-Categories/sistemas-anti-intrusion" target="_blank" rel="noreferrer">
-                    <img src="../img/honeywell.png" width="80px"  alt="Link a Honeywell"></a>
+                    <img src="../img/honeywell.png" width="auto"  alt="Link a Honeywell"></a>
 
                 </div>
 
@@ -227,7 +300,7 @@
                 <div class="col-12 col-sm-3 d-flex align-items-center justify-content-center">
 
                     <a href="https://es.control4.com/" target="_blank" rel="noreferrer">
-                    <img src="../img/control4.png" width="80px" alt="Link a Control4"></a>
+                    <img src="../img/control4.png" width="auto" alt="Link a Control4"></a>
             
                 </div>
 

@@ -107,9 +107,8 @@ h2, h3, h4 {
   /*** GRID alineados de los servicios en index.html ***/
   display: grid;
   grid-template-columns: 3.125rem 1fr 1fr 0.25fr 1fr 1fr 3.125rem;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1.1fr 1.5fr;
   width: 100%;
-  height: 100%;
   place-items: center; }
 
 .flexServicios {
@@ -124,11 +123,16 @@ h2, h3, h4 {
 .serviciosUno, .serviciosDos, .serviciosTres, .serviciosCuatro {
   /*configuración para el grid de ContenedorGrid en index.html*/
   grid-area: 1 / 2 / 2 / 4;
-  width: 70%; }
+  width: 70%;
+  padding: 50px;
+  font-size: 20px;
+  background-color: #02023f;
+  color: snow;
+  margin-top: 1rem; }
 
 .serviciosImg {
   /*configuración para el grid de ContenedorGrid en index.html*/
-  width: 30%; }
+  width: 25%; }
 
 .serviciosDos {
   /*configuración para el grid de ContenedorGrid en index.html*/
@@ -143,7 +147,9 @@ h2, h3, h4 {
   grid-area: 2 / 5 / 3 / 7; }
 
 .alieacionServicios {
-  text-align: center; }
+  text-align: left;
+  border-bottom: 1px solid;
+  margin-bottom: 10px; }
 
 .seccionPrincipal {
   /* Propuesta temporal para la Sección servicios de la empresa index.hmtl */
@@ -184,7 +190,7 @@ h2, h3, h4 {
   .seccionPrincipalGeneral3 p, .flexProyecto p {
     width: 100%; }
 
-.seccionPrincipal p, .seccionAside p,
+.seccionAside p,
 .seccionPrincipalGeneral p, .seccionPrincipalGeneral2 p {
   /*Estilo inicial para una caja de fondo blanco para el texto*/
   font-size: 1.25rem;
@@ -349,17 +355,38 @@ h2, h3, h4 {
     width: 40%;
     align-self: flex-start;
     margin: 50px 0 30px 0; }
+  .flexPartner img {
+    margin-top: 3rem;
+    margin-bottom: 1rem; }
+
+.imgBorder {
+  border-radius: 200px;
+  max-width: 300px;
+  max-height: 300px; }
+
+.imgLogos {
+  width: 100%;
+  max-width: 250px; }
+
+.btn-light {
+  display: none; }
 
 .alineacionPartner {
   /* Agrupación de imagen y texto para cada categoría de los 4 elementos principales en partners.hmtl*/
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   width: 40%; }
   .alineacionPartner h3 {
     width: fit-content;
-    padding: 0 3rem 0 3rem; }
+    padding: 0 3rem 0 3rem;
+    margin-top: 1rem; }
+
+.estiloTab {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: snow; }
 
 .alineadorContacto {
   /* Contenedor Flex para mapas formulario y datos de dirección */
@@ -594,25 +621,30 @@ h2, h3, h4 {
     background-image: linear-gradient(to left bottom, #044bb5, #006bc2, #3889c9, #68a4cd, #9abed1);
     font-family: 'Abhaya Libre', serif; }
   /******Index.html*********/
-  .seccionPrincipal {
-    height: 100%; }
-    .seccionPrincipal p {
-      width: 90%;
-      margin: 15px 5px 50px 5px; }
+  /*.seccionPrincipal{
+
+        height: 100%;
+         
+        p{
+            width: 90%;
+            margin: 15px 5px 50px 5px;
+        }
+    }*/
   .contenedorGridSeccion {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1.5fr; }
     .contenedorGridSeccion .serviciosUno, .contenedorGridSeccion .serviciosDos, .contenedorGridSeccion .serviciosTres, .contenedorGridSeccion .serviciosCuatro {
       grid-area: 1 / 1 / 2 / 3;
-      width: 100%; }
+      width: 90%;
+      padding: 29px; }
     .contenedorGridSeccion .serviciosDos {
       grid-area: 1 / 3 / 2 / 5;
-      width: 100%; }
+      width: 90%; }
     .contenedorGridSeccion .serviciosTres {
-      width: 100%;
+      width: 90%;
       grid-area: 2 / 1 / 3 / 3; }
     .contenedorGridSeccion .serviciosCuatro {
-      width: 100%;
+      width: 90%;
       grid-area: 2 / 3 / 3 / 5; }
   .seccionAside {
     width: 110%;
@@ -628,10 +660,12 @@ h2, h3, h4 {
   .seccionPrincipalGeneral {
     margin-bottom: 100px; }
   .seccionPrincipalGeneral2 p {
-    margin: 25px 5px 35px 40px;
+    margin: 75px 5px 89px 34px;
     text-align: center; }
   .seccionPartner {
     height: fit-content; }
+  .btn-light {
+    display: none; }
   .mapaIframe iframe {
     /* Para hacer temporalmente responsive el mapa en contacto.html */
     width: 90%; }
@@ -677,7 +711,9 @@ h2, h3, h4 {
     place-items: center;
     text-align: center; }
   .serviciosUno, .serviciosDos, .serviciosTres, .serviciosCuatro {
-    grid-area: 1 / 1 / 2 / 3; }
+    grid-area: 1 / 1 / 2 / 3;
+    padding: 22px;
+    margin-bottom: 10px; }
   .serviciosDos {
     grid-area: 1 / 3 / 2 / 5; }
   .serviciosTres {
@@ -685,10 +721,8 @@ h2, h3, h4 {
   .serviciosCuatro {
     grid-area: 2 / 3 / 3 / 5; }
   .serviciosUno, .serviciosDos, .serviciosTres, .serviciosCuatro, .serviciosDos, .serviciosTres, .serviciosCuatro {
-    width: 100%; }
-    .serviciosUno p, .serviciosDos p, .serviciosTres p, .serviciosCuatro p, .serviciosDos p, .serviciosTres p, .serviciosCuatro p {
-      width: 75%; }
-  .seccionPrincipal p, .seccionAside p {
+    width: 90%; }
+  .seccionAside p {
     /*Estilo inicial para una caja de fondo blanco para el texto*/
     width: 80%;
     margin: 30px 20px 50px 20px; }
@@ -722,9 +756,12 @@ h2, h3, h4 {
     text-align: center; }
   /* Partners*/
   .flexPartner p {
-    width: 50%; }
+    width: 50%;
+    margin: 50px 0 30px 30px; }
   .seccionPartner {
     height: fit-content; }
+  .btn-light {
+    display: none; }
   .mapaContacto {
     /* Class del div para organizar el iframe del mapa y datos en contacto.html */
     flex-direction: column;
@@ -742,6 +779,8 @@ h2, h3, h4 {
     align-items: center; }
     .AlineacionDatos h3 {
       margin: 0rem; }
+  .imgLogos, .imgBorder {
+    width: 75%; }
   .formularioContacto {
     /* Formulario en contacto.html */
     width: 569px;
@@ -800,6 +839,11 @@ h2, h3, h4 {
     color: snow; }
   .navbar-light .navbar-brand, .navbar-light #colorMenu {
     color: snow; }
+  .navbar {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem; }
+  .nav-link {
+    padding: 0.5rem 1rem; }
   .footerSecundario .contenedorFooterSecundario #estiloFooterNav {
     color: snow; }
   .carousel-inner {
@@ -812,25 +856,25 @@ h2, h3, h4 {
   .contenedorGridSeccion {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.75fr 0.75fr 0.75fr 0.75fr;
     width: 100%;
     place-items: center; }
   .serviciosUno, .serviciosDos, .serviciosTres, .serviciosCuatro {
-    grid-area: 1 / 1 / 2 / 2; }
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 22px;
+    margin-top: 2rem; }
   .serviciosDos {
     grid-area: 2 / 1 / 3 / 2; }
   .serviciosTres {
     grid-area: 3 / 1 / 4 / 2; }
   .serviciosCuatro {
-    grid-area: 4 /1 / 5 / 2; }
+    grid-area: 4 / 1 / 5 / 2;
+    margin-bottom: 1rem; }
   .serviciosUno, .serviciosDos, .serviciosTres, .serviciosCuatro, .serviciosDos, .serviciosTres, .serviciosCuatro {
-    width: 100%; }
-    .serviciosUno p, .serviciosDos p, .serviciosTres p, .serviciosCuatro p, .serviciosDos p, .serviciosTres p, .serviciosCuatro p {
-      width: 90%;
-      margin: 1rem 0 1rem 0; }
+    width: 90%; }
   .seccionPrincipal {
     width: 100%; }
-  .seccionPrincipal p, .seccionAside p {
+  .seccionAside p {
     /*Estilo inicial para una caja de fondo blanco para el texto*/
     width: 80%;
     margin: 50px 20px; }
@@ -881,12 +925,13 @@ h2, h3, h4 {
     width: 100%; }
   .seccionPrincipalGeneral2 p {
     width: 75%;
-    margin: 20px 5px;
+    margin: 50px 5px;
     text-align: center; }
   .flexPartner {
     flex-direction: column;
     align-content: center;
-    align-items: center; }
+    align-items: center;
+    margin-top: 2rem; }
     .flexPartner p {
       align-self: center;
       margin-bottom: 30px;
@@ -895,6 +940,20 @@ h2, h3, h4 {
       width: 80%; }
   .seccionPartner {
     height: fit-content; }
+  .estiloTab {
+    font-size: 0.9rem; }
+  .btn-light {
+    display: inline;
+    margin-bottom: 20px; }
+  .imgLogos {
+    max-width: 200px;
+    margin-top: 15px; }
+  .imgBorder {
+    border-radius: 250px;
+    max-width: 300px;
+    max-height: 300px; }
+  #imgCisco, #imgAxis, #imgAvaya, #imgCrestron {
+    width: auto; }
   .mapaContacto {
     /* Class del div para organizar el iframe del mapa y datos en contacto.html */
     flex-direction: column;
