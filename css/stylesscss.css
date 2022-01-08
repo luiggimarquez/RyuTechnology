@@ -152,7 +152,7 @@ h2, h3, h4 {
   margin-bottom: 10px; }
 
 .seccionPrincipal {
-  /* Propuesta temporal para la Sección servicios de la empresa index.hmtl */
+  /* Fondo Sección servicios de la empresa index.hmtl */
   grid-area: principal;
   background-color: #60A3D9;
   background: #54609D;
@@ -419,7 +419,7 @@ h2, h3, h4 {
   flex-direction: column;
   position: relative; }
   .mapaDatos p {
-    color: white;
+    color: snow;
     font-weight: 700;
     font-size: 19px;
     margin: 1.5rem;
@@ -441,8 +441,8 @@ h2, h3, h4 {
   z-index: 1; }
 
 .fondoTexto2 {
-  position: absolute;
   width: 80%;
+  position: absolute;
   z-index: -9;
   transform: rotatez(140deg); }
 
@@ -621,15 +621,6 @@ h2, h3, h4 {
     background-image: linear-gradient(to left bottom, #044bb5, #006bc2, #3889c9, #68a4cd, #9abed1);
     font-family: 'Abhaya Libre', serif; }
   /******Index.html*********/
-  /*.seccionPrincipal{
-
-        height: 100%;
-         
-        p{
-            width: 90%;
-            margin: 15px 5px 50px 5px;
-        }
-    }*/
   .contenedorGridSeccion {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1.5fr; }
@@ -649,6 +640,8 @@ h2, h3, h4 {
   .seccionAside {
     width: 110%;
     justify-content: space-between; }
+  .imgAside {
+    transform: translate(0, -100px); }
   .imgEmpresa {
     flex-direction: column; }
     .imgEmpresa img {
@@ -945,6 +938,8 @@ h2, h3, h4 {
   .btn-light {
     display: inline;
     margin-bottom: 20px; }
+  #botonPartner {
+    text-decoration: none; }
   .imgLogos {
     max-width: 200px;
     margin-top: 15px; }

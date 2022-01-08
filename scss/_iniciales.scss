@@ -3,9 +3,10 @@
     padding: 0px;
     box-sizing: border-box;   
 }
+
 @font-face {
     
-    font-family: 'Anurati Normal';
+    font-family: 'Anurati Normal'; //fuente para el título principal del sitio, H1
     src: url("../fuente/Anurati-Regular.woff") format('woff');
 }
 
@@ -13,8 +14,6 @@
 
     background-image: linear-gradient(to right top, #265fb5, #4575c3, #608bd1, #7aa1df, #95b8ec);
     font-family:'Abhaya Libre', serif;
-
-    
 }
 
 h2, h3, h4{ /*Estilos por defectos para los titulos de toda la página*/

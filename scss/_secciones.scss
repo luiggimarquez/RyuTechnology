@@ -42,7 +42,7 @@
     width:70%;
     padding:50px;
     font-size: 20px;
-    background-color: rgb(2, 2, 63);
+    background-color:$fondoServicios;
     color: $textoBlanco;
     margin-top: 1rem;   
 }
@@ -79,7 +79,7 @@
     margin-bottom: 10px;
 }
 
-.seccionPrincipal{  /* Propuesta temporal para la Sección servicios de la empresa index.hmtl */
+.seccionPrincipal{  /* Fondo Sección servicios de la empresa index.hmtl */
 
     grid-area: principal;
     background-color: #60A3D9;
@@ -139,6 +139,7 @@
     }
 
     p{ //Ajustar el contenido del párrafo del aside en index.html
+
         align-self: center;
         margin:5px;
     }
@@ -388,9 +389,8 @@
     flex-direction:column;
     position:relative;
     
-    
     p{
-        color: white;
+        color: $textoBlanco;
         font-weight: 700;
         font-size: 19px;
         margin: 1.5rem;
@@ -414,23 +414,18 @@
 }
 .fondoTexto{
 
-    width: 90%;
-    position: absolute;
-    z-index: 1;
-    
+    @include direccionContacto(90%,1);
 }
 
 .fondoTexto2{
 
-    position:absolute;
-    width: 80%;
-    z-index: -9;
+    @include direccionContacto(80%,-9);
     transform: rotatez(140deg);
 }
 
 .animate__animated.animate__zoomIn{
-    --animate-delay: 60s;
 
+    --animate-delay: 60s;
 }
 //****************  Formulario ************************* */
 

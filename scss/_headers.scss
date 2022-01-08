@@ -3,7 +3,7 @@
 .headerPrincipal{ /* imagen para el header*/
 
     //background-image: url(../img/background.png);
-    background-color: rgb(2, 2, 63);
+    background-color: $fondoServicios;
     width: 100%;
     @include flexOpcion(flex, column, center,center);
 
@@ -57,8 +57,6 @@
 
 } //cierre Headerprincipal
 
-
-
 .navbar-nav{ //modificacion atributos del bootstrap
             
     a:hover{
@@ -75,14 +73,12 @@
 .container-fluid{ /*modificacion del NAV del boostrap*/
 
     width: auto;
-
 }
 
 .navbar-light .navbar-brand, .nav-link, #colorMenu{/*Cambio del color del boostrap de la fuente del nav*/
 
     color:$azulPrincipal;
-
-} //cierre navbar
+} 
 
 .navbar {
 
@@ -93,5 +89,4 @@
 .nav-link {
 
     padding: 0rem 1rem;
-
 }

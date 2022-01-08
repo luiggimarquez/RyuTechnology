@@ -7,16 +7,6 @@
     }
     /******Index.html*********/
 
-    /*.seccionPrincipal{
-
-        height: 100%;
-         
-        p{
-            width: 90%;
-            margin: 15px 5px 50px 5px;
-        }
-    }*/
-
     .contenedorGridSeccion{
 
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -52,6 +42,11 @@
 
         width: 110%;
         justify-content:space-between;
+    }
+
+    .imgAside{
+
+        transform: translate(0,-100px);
     }
 
     // *********** Empresa.html *********/
@@ -155,7 +150,8 @@
 
     .bodyPrincipal{ /* Fondo azul para todas las páginas y estilo de letra */
 
-        background-image: linear-gradient(to bottom, #001dde, #0034e2, #0046e5, #0054e6, #1762e6, #2171e9, #3280eb, #468eec, #5ca1ef, #77b4f1, #94c6f1, #b3d7f2);
+        background-image: linear-gradient(to bottom, #001dde, #0034e2, #0046e5, #0054e6,
+        #1762e6, #2171e9, #3280eb, #468eec, #5ca1ef, #77b4f1, #94c6f1, #b3d7f2);
     }
 
     .navbar-light{
@@ -197,7 +193,6 @@
         width:100%;
         place-items: center;
         text-align: center;
-       
     }
     
     .serviciosUno{
@@ -299,7 +294,7 @@
         height: fit-content;
     }
 
-    .btn-light{
+    .btn-light{ //oculta botón en partners.html
 
         display: none;
     }
@@ -420,7 +415,6 @@
     
         @include flexOpcion2(flex, center,center);
         padding-top:10px;
-        //font-size: 2rem;
     }
 
     .menuNav ul { /* Disposión en Horizontal de la lista del menú */
@@ -454,7 +448,6 @@
     .nav-link {
     
         padding: 0.5rem 1rem;
-    
     }
 
     .footerSecundario .contenedorFooterSecundario #estiloFooterNav {
@@ -487,8 +480,7 @@
         
         grid-area: 1 / 1 / 2 / 2;
         padding: 22px;
-        margin-top: 2rem;
-         
+        margin-top: 2rem;  
     }
     
     .serviciosDos{
@@ -640,6 +632,11 @@
         
         display: inline;
         margin-bottom: 20px;
+    }
+
+    #botonPartner{
+
+        text-decoration: none;
     }
 
     .imgLogos {

@@ -6,7 +6,7 @@
     align-items: $alinea;
 }
 
-@mixin flexOpcion2($display,$justi,$alinea){
+@mixin flexOpcion2($display, $justi, $alinea){
 
     display: $display;
     justify-content: $justi;
@@ -27,10 +27,9 @@
     position: $posicion;
     width: 100%;
     height: 100%;
-
 }
 
-@mixin formulario($display,$ancho,$margen,$borde,$bordeRadio,$fondoColor){
+@mixin formulario($display, $ancho, $margen, $borde, $bordeRadio, $fondoColor){
 
     display:$display;
     width: $ancho;
@@ -46,4 +45,11 @@
     justify-content: $justify;
     align-items: $align;
     width: $ancho;
+}
+
+@mixin direccionContacto($ancho,$posicion){
+
+    width: $ancho;
+    position: absolute;
+    z-index: $posicion;
 }

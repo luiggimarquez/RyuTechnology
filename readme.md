@@ -66,6 +66,6 @@ Este proyecto fue realizado para las clases de Desarrollo Web de CoderHouse por:
 
 **Ing. Luiggi Márquez** - (https://github.com/luiggimarquez) ✌️
 
-Buenos Aires, Argentina 2021
+Buenos Aires, Argentina 2022
 
 
