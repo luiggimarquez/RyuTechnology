@@ -1,4 +1,4 @@
-@media screen and (min-width:769px) and (max-width: 1200px){ /*Modificacion para pantalla desktop standard y ipad Pro*/
+@media screen and (min-width:769px) and (max-width: 1199px){ /*Modificacion para pantalla desktop standard y ipad Pro*/
 
     .bodyPrincipal{ /* Fondo azul para todas las páginas y estilo de letra */
 
@@ -46,7 +46,7 @@
 
     .imgAside{
 
-        transform: translate(0,-100px);
+        transform: translate(0,-230px);
     }
 
     // *********** Empresa.html *********/
@@ -94,6 +94,11 @@
         display: none;
     }    
 
+    .flexPartner p {
+
+        width: 50%;
+    }
+
     //******** Iframe del mapa de ubicación y dirección contacto.hmtl ****** */
 
     .mapaIframe iframe{ /* Para hacer temporalmente responsive el mapa en contacto.html */
@@ -106,9 +111,29 @@
         margin: 0.5rem 1rem;
     }
 
-    .AlineacionDatos h3{
+    .AlineacionDatos{
 
-        margin: 0rem  1rem;
+        transform: translateY(-71px);
+        
+        h3{
+            margin: 0rem  1rem;
+        }
+    }
+
+    .fondoTexto {
+
+        @include direccionContacto2(50%,-12px,-87px);
+    }
+    
+    .fondoTexto2 {
+
+        @include direccionContacto2(50%,-20px,-134px);
+    }
+
+    .transicionTexto{
+
+        animation-duration: 1s;
+        transition: 1s;
     }
 
     .navbar-light {
@@ -144,6 +169,7 @@
         }
     }
 }
+
 //Modificacion para ipad mini - tablets
 
 @media only screen and (min-width: 670px) and (max-width: 768px){
@@ -246,6 +272,7 @@
         justify-content: center;
         margin: 0px;
     }
+
     /* *********** Empresa.html *********/
 
     .imgEmpresa {
@@ -307,7 +334,7 @@
         margin-top: 1rem;
     }
 
-    .mapaIframe iframe{ /* Para hacer temporalmente responsive el mapa en contacto.html */
+    .mapaIframe iframe{ /* Para hacer  responsive el mapa en contacto.html */
 
         width: 90%;
     }
@@ -332,10 +359,28 @@
         }
     }
 
+    .fondoTexto{
+
+        @include direccionContacto2(80%,47px,-60px);
+    }
+
+    .fondoTexto2{
+        
+        @include direccionContacto2(80%,50px,-104px);
+    }
+
+    .transicionTexto{
+
+        animation-duration: 1s;
+        transition: 1s;
+    }
+
     .imgLogos, .imgBorder {
 
         width: 75%;
     }
+
+
     //******** formulario ********/
 
     .formularioContacto{ /* Formulario en contacto.html */
@@ -385,13 +430,18 @@
         color: $textoBlanco;
     }
 
-    .footerSecundario{
-    
-        li a{ /* Estilos para las opciones del menú del footerSecundario */
-            
-            padding: 5px; /* Este padding coloca separación entre los elementos */
-            margin:20px;
-        }    
+    .footerSecundario ul {
+ 
+        padding: 4rem 0;
+        border-radius: 1rem;
+        
+        li {
+            margin: 2rem 4rem;
+
+            a{
+                font-size: 1.75rem;
+            }
+        }
     }
 }
 
@@ -515,7 +565,7 @@
         margin: 50px 20px;
     }
      
-     .seccionAside, .seccionAside img{ /* Seccion Parterns lateral del index*/
+    .seccionAside, .seccionAside img{ /* Seccion Parterns lateral del index*/
  
         width: 100%;
         margin: 0px;
@@ -569,7 +619,12 @@
 
         margin: 20px 0 20px 0;
     }
+    
+    .imgEmpresa p {
 
+        margin: 1.5rem 0.5rem 5rem 0.5rem;
+    }
+    
     // proyectos
 
     #videoIframe iframe{
@@ -584,13 +639,18 @@
         h2{
             font-size: 1.25rem;
         }
+
+        iframe {
+            padding: 10px;
+            margin: 10px 0 20px 0;
+        }
     }
 
     .seccionPrincipalGeneral2{
 
         img{
-            margin: 10px 0 20px 0;
-            width: 100%;
+            margin: 20px 0 20px 0;
+            width: 90%;
         }
 
         p{
@@ -674,14 +734,23 @@
         margin: 2rem;
     }
 
-    .AlineacionDatos h3{
-     
-        margin: 2rem;
+    .AlineacionDatos{
+    
+        transform: translateY(0px);
+        h3{
+            margin: 2rem;
+        }
     }
 
     .fondoTexto, .fondoTexto2{
 
         display: none;
+    }
+
+    .transicionTexto{
+
+        animation-name:none;
+        animation-duration: 0s;
     }
 
     // formulario */
@@ -769,6 +838,7 @@
 
             display: grid;
             place-items: center;
+            border-radius: 1rem;
         }
 
         li{ /* Estilos para las opciones del menú del footerSecundario */
@@ -785,7 +855,6 @@
             .nav-link, #colorMenu,.nav-link.active { /*Color de texto para menu nav bootstrap */
 
                 color: $textoBlanco;
-
             }
         }
 

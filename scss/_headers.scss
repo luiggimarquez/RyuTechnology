@@ -14,7 +14,6 @@
         padding-top: 20px;
         color: $textoBlanco;
         font-size: 50px;
-
     }
 
     .alineadorLogo{
@@ -30,6 +29,12 @@
 
             width: 6.25rem;
             margin-top: 5px;
+            transition: 0.5s;
+
+            &:hover{
+
+                transform: scale(1.05);
+            }
         }
 
     }//cierre alineadorLogo
@@ -88,5 +93,5 @@
 
 .nav-link {
 
-    padding: 0rem 1rem;
+    padding: 0.25rem 1rem;
 }

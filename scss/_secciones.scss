@@ -6,12 +6,18 @@
 
         font-size: 1.5rem;
         font-weight: 800;
-        color:$textoBlanco;
-        background-color: rgba(94, 70, 180, 0.719);
+        color:$fondoServicios;
+       // background-color: rgba(94, 70, 180, 0.719);
+        background-color: rgba(253, 253, 253, 0.719);
         text-justify: auto;
         text-align: center;
         align-self: center;
     }
+}
+
+#tamanoSlider{
+
+    max-width: 1900px;
 }
 
 .seccionAlineacion{ /* sección Servicios del index, esta clase alinea los elementos a un lado del otro*/
@@ -44,12 +50,13 @@
     font-size: 20px;
     background-color:$fondoServicios;
     color: $textoBlanco;
-    margin-top: 1rem;   
+    margin-top: 3rem;   
 }
 
 .serviciosImg{ /*configuración para el grid de ContenedorGrid en index.html*/
     
     width: 25%;
+    padding-bottom: 10px;
 }
 
 .serviciosDos{ /*configuración para el grid de ContenedorGrid en index.html*/
@@ -62,14 +69,14 @@
     
     @extend .serviciosUno;
     grid-area: 2 / 2 / 3 / 4;
-
+    margin-top: 0rem;
 }
 
 .serviciosCuatro{ /*configuración para el grid de ContenedorGrid en index.html*/
    
     @extend .serviciosUno;
     grid-area: 2 / 5 / 3 / 7;
-
+    margin-top: 0rem;
 }
 
 .alieacionServicios{
@@ -102,6 +109,7 @@
 
     @include flexOpcion(flex,column,center,center);
     @include seccionGeneral(60%);
+    margin-bottom: 6rem;
 }
 
 .seccionPrincipalGeneral3{ /* Alienación elementos "otros aliados" partners.html */
@@ -145,6 +153,11 @@
     }
 }
 
+.imgAside{
+
+    transform: translate(0,-186px);
+}
+
 .imgQuery{ /*Imagen para sustituacion del Aside cuando se usen Queries*/
 
     display: none;
@@ -175,7 +188,7 @@
 
 .carousel-inner { //modificación componente de bootstrap
 
-    margin: 20px 0 100px 0;
+    margin: 20px 0 20px 0;
 }
 
 .misionEmpresa{ /* Alineación de misión/visión en empresa.hmtl*/
@@ -257,6 +270,7 @@
     iframe{ /* Sección del video en proyectos.html */
 
         padding: 10px;
+        margin-top: 10px;
     }
 }
 
@@ -292,6 +306,11 @@
         width: auto;
         margin: 30px;
         align-self: center;
+        transition: 0.5s;
+        &:hover{
+
+            transform: scale(1.15);
+        }
     }
 }
 
@@ -309,7 +328,7 @@
 
     img{
 
-        margin-top: 3rem;
+        margin-top: 2rem;
         margin-bottom: 1rem;
     }
 }
@@ -324,7 +343,7 @@
 .imgLogos{
 
     width: 100%;
-    max-width: 250px;
+    max-width: 200px;
 }
 
 .btn-light{
@@ -350,6 +369,7 @@
     font-weight: 900;
     color:$textoBlanco;
 }
+
 //************** Sección del iframe del mapa de ubicación y dirección ************************* */
 
 .alineadorContacto{ /* Contenedor Flex para mapas formulario y datos de dirección */
@@ -387,13 +407,12 @@
 .mapaDatos{ /* Para alinear dirección y teléfono de contacto.html y colocarlos en vertical */
 
     flex-direction:column;
-    position:relative;
     
     p{
         color: $textoBlanco;
         font-weight: 700;
         font-size: 19px;
-        margin: 1.5rem;
+        margin: 1.5rem 0.5rem;
         z-index: 2;
     }
 }
@@ -402,7 +421,9 @@
 
     display:flex;
     width: 100%;
-    z-index: 2;
+    z-index: 5;
+    transform: translateY(-18px);
+    position:relative;
 
     h3{
         width: fit-content;
@@ -412,21 +433,64 @@
         width: 100%;
     }
 }
-.fondoTexto{
 
-    @include direccionContacto(90%,1);
+.fondoTexto{ //animnación imágenes de la dirección en Contacto.HTML
+
+    @include direccionContacto(45%,1,29px,-87px,trans1);
+   
+    @keyframes trans1 {
+        
+        from {
+            transform: translate(-1000px,0);
+            opacity: 0%;
+        }
+
+        to {
+            opacity: 100%; 
+        }    
+    }  
 }
 
-.fondoTexto2{
+.fondoTexto2{ //animnación imágenes de la dirección en Contacto.HTML
 
-    @include direccionContacto(80%,-9);
-    transform: rotatez(140deg);
+    @include direccionContacto(45%,-9,20px,-134px,trans2);
+    animation-duration: 0.5s;
+
+    @keyframes trans2 {
+        
+        from {
+            transform: translate(2000px,0);
+            opacity: 0%;
+        }
+
+        to {
+            
+            opacity: 85%;
+        }    
+    }  
 }
 
-.animate__animated.animate__zoomIn{
+.transicionTexto{ //animnación texto de la dirección en Contacto.HTML
 
-    --animate-delay: 60s;
+    z-index: 5;
+    animation-name:transText;
+    animation-duration: 2s;
+    transition: 1s;
+
+    @keyframes transText {
+        
+        from {
+            transform: translate(0,-1000px);
+            opacity: 0%;
+        }
+
+        to {
+            transform: translate(0,0);
+            opacity: 85%;
+        }    
+    }
 }
+
 //****************  Formulario ************************* */
 
 .formularioContacto{ /* Formulario en contacto.html */

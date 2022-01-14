@@ -7,7 +7,8 @@
 
 @font-face {
   font-family: 'Anurati Normal';
-  src: url("../fuente/Anurati-Regular.woff") format("woff"); }
+  src: url("../fuente/Anurati-Regular.woff") format("woff");
+  font-display: swap; }
 
 .bodyPrincipal {
   /* Fondo azul para todas las páginas y estilo de letra*/
@@ -51,7 +52,10 @@ h2, h3, h4 {
     .headerPrincipal .alineadorLogo .logoHeader {
       /* logo de la empresa para el header*/
       width: 6.25rem;
-      margin-top: 5px; }
+      margin-top: 5px;
+      transition: 0.5s; }
+      .headerPrincipal .alineadorLogo .logoHeader:hover {
+        transform: scale(1.05); }
   .headerPrincipal .menuNav {
     /*modificacion de estilos menú principal de navegación*/
     background: #54609D;
@@ -85,18 +89,21 @@ h2, h3, h4 {
   padding-bottom: 0; }
 
 .nav-link {
-  padding: 0rem 1rem; }
+  padding: 0.25rem 1rem; }
 
 .carousel-inner {
   margin: 50px 0 100px 0; }
   .carousel-inner .textSlider {
     font-size: 1.5rem;
     font-weight: 800;
-    color: snow;
-    background-color: rgba(94, 70, 180, 0.719);
+    color: #02023f;
+    background-color: rgba(253, 253, 253, 0.719);
     text-justify: auto;
     text-align: center;
     align-self: center; }
+
+#tamanoSlider {
+  max-width: 1900px; }
 
 .seccionAlineacion {
   /* sección Servicios del index, esta clase alinea los elementos a un lado del otro*/
@@ -128,11 +135,12 @@ h2, h3, h4 {
   font-size: 20px;
   background-color: #02023f;
   color: snow;
-  margin-top: 1rem; }
+  margin-top: 3rem; }
 
 .serviciosImg {
   /*configuración para el grid de ContenedorGrid en index.html*/
-  width: 25%; }
+  width: 25%;
+  padding-bottom: 10px; }
 
 .serviciosDos {
   /*configuración para el grid de ContenedorGrid en index.html*/
@@ -140,11 +148,13 @@ h2, h3, h4 {
 
 .serviciosTres {
   /*configuración para el grid de ContenedorGrid en index.html*/
-  grid-area: 2 / 2 / 3 / 4; }
+  grid-area: 2 / 2 / 3 / 4;
+  margin-top: 0rem; }
 
 .serviciosCuatro {
   /*configuración para el grid de ContenedorGrid en index.html*/
-  grid-area: 2 / 5 / 3 / 7; }
+  grid-area: 2 / 5 / 3 / 7;
+  margin-top: 0rem; }
 
 .alieacionServicios {
   text-align: left;
@@ -176,7 +186,8 @@ h2, h3, h4 {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 6rem; }
   .seccionPrincipalGeneral2 p {
     width: 60%; }
 
@@ -221,6 +232,9 @@ h2, h3, h4 {
     align-self: center;
     margin: 5px; }
 
+.imgAside {
+  transform: translate(0, -186px); }
+
 .imgQuery {
   /*Imagen para sustituacion del Aside cuando se usen Queries*/
   display: none; }
@@ -245,7 +259,7 @@ h2, h3, h4 {
     margin: 1.5rem 5rem; }
 
 .carousel-inner {
-  margin: 20px 0 100px 0; }
+  margin: 20px 0 20px 0; }
 
 .misionEmpresa {
   /* Alineación de misión/visión en empresa.hmtl*/
@@ -319,7 +333,8 @@ h2, h3, h4 {
   width: 100%; }
   #seccionVideo iframe {
     /* Sección del video en proyectos.html */
-    padding: 10px; }
+    padding: 10px;
+    margin-top: 10px; }
 
 .flexProyecto {
   /* Alineación de los elementos de las categorías de los proyectos.html */
@@ -342,7 +357,10 @@ h2, h3, h4 {
     /* Para dar flexibilidad a las imágenes de "Otros Aliados" partners.html */
     width: auto;
     margin: 30px;
-    align-self: center; }
+    align-self: center;
+    transition: 0.5s; }
+    .seccionPartner img:hover {
+      transform: scale(1.15); }
 
 .flexPartner {
   /* contenedor Flebox para los cuatro elementos de seccionPrincipalGeneral2 en partners.html*/
@@ -356,7 +374,7 @@ h2, h3, h4 {
     align-self: flex-start;
     margin: 50px 0 30px 0; }
   .flexPartner img {
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 1rem; }
 
 .imgBorder {
@@ -366,7 +384,7 @@ h2, h3, h4 {
 
 .imgLogos {
   width: 100%;
-  max-width: 250px; }
+  max-width: 200px; }
 
 .btn-light {
   display: none; }
@@ -416,38 +434,72 @@ h2, h3, h4 {
 
 .mapaDatos {
   /* Para alinear dirección y teléfono de contacto.html y colocarlos en vertical */
-  flex-direction: column;
-  position: relative; }
+  flex-direction: column; }
   .mapaDatos p {
     color: snow;
     font-weight: 700;
     font-size: 19px;
-    margin: 1.5rem;
+    margin: 1.5rem 0.5rem;
     z-index: 2; }
 
 .AlineacionDatos {
   /* Contedor para título y parrafo en contacto.html */
   display: flex;
   width: 100%;
-  z-index: 2; }
+  z-index: 5;
+  transform: translateY(-18px);
+  position: relative; }
   .AlineacionDatos h3 {
     width: fit-content; }
   .AlineacionDatos p {
     width: 100%; }
 
 .fondoTexto {
-  width: 90%;
+  width: 45%;
   position: absolute;
-  z-index: 1; }
+  z-index: 1;
+  transform: translate(29px, -87px);
+  animation-name: trans1;
+  animation-duration: 1s;
+  transition: 1s; }
+
+@keyframes trans1 {
+  from {
+    transform: translate(-1000px, 0);
+    opacity: 0%; }
+  to {
+    opacity: 100%; } }
 
 .fondoTexto2 {
-  width: 80%;
+  width: 45%;
   position: absolute;
   z-index: -9;
-  transform: rotatez(140deg); }
+  transform: translate(20px, -134px);
+  animation-name: trans2;
+  animation-duration: 1s;
+  transition: 1s;
+  animation-duration: 0.5s; }
 
-.animate__animated.animate__zoomIn {
-  --animate-delay: 60s; }
+@keyframes trans2 {
+  from {
+    transform: translate(2000px, 0);
+    opacity: 0%; }
+  to {
+    opacity: 85%; } }
+
+.transicionTexto {
+  z-index: 5;
+  animation-name: transText;
+  animation-duration: 2s;
+  transition: 1s; }
+
+@keyframes transText {
+  from {
+    transform: translate(0, -1000px);
+    opacity: 0%; }
+  to {
+    transform: translate(0, 0);
+    opacity: 85%; } }
 
 .formularioContacto {
   /* Formulario en contacto.html */
@@ -614,7 +666,7 @@ h2, h3, h4 {
   /*cambia el color de los estilos del nav de bootstrap*/
   color: dodgerblue; }
 
-@media screen and (min-width: 769px) and (max-width: 1200px) {
+@media screen and (min-width: 769px) and (max-width: 1199px) {
   /*Modificacion para pantalla desktop standard y ipad Pro*/
   .bodyPrincipal {
     /* Fondo azul para todas las páginas y estilo de letra */
@@ -641,7 +693,7 @@ h2, h3, h4 {
     width: 110%;
     justify-content: space-between; }
   .imgAside {
-    transform: translate(0, -100px); }
+    transform: translate(0, -230px); }
   .imgEmpresa {
     flex-direction: column; }
     .imgEmpresa img {
@@ -659,13 +711,32 @@ h2, h3, h4 {
     height: fit-content; }
   .btn-light {
     display: none; }
+  .flexPartner p {
+    width: 50%; }
   .mapaIframe iframe {
     /* Para hacer temporalmente responsive el mapa en contacto.html */
     width: 90%; }
   .mapaDatos p {
     margin: 0.5rem 1rem; }
-  .AlineacionDatos h3 {
-    margin: 0rem  1rem; }
+  .AlineacionDatos {
+    transform: translateY(-71px); }
+    .AlineacionDatos h3 {
+      margin: 0rem  1rem; }
+  .fondoTexto {
+    width: 50%;
+    transform: translate(-12px, -87px);
+    animation-name: none;
+    animation-duration: 0s;
+    transition: 0s; }
+  .fondoTexto2 {
+    width: 50%;
+    transform: translate(-20px, -134px);
+    animation-name: none;
+    animation-duration: 0s;
+    transition: 0s; }
+  .transicionTexto {
+    animation-duration: 1s;
+    transition: 1s; }
   .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-nav #colorMenu, .navbar-light .navbar-nav .nav-link.active {
     /*Color de texto para menu nav bootstrap */
     color: snow; }
@@ -760,7 +831,7 @@ h2, h3, h4 {
     flex-direction: column;
     margin-top: 1rem; }
   .mapaIframe iframe {
-    /* Para hacer temporalmente responsive el mapa en contacto.html */
+    /* Para hacer  responsive el mapa en contacto.html */
     width: 90%; }
   .mapaDatos {
     height: 500px; }
@@ -772,6 +843,21 @@ h2, h3, h4 {
     align-items: center; }
     .AlineacionDatos h3 {
       margin: 0rem; }
+  .fondoTexto {
+    width: 80%;
+    transform: translate(47px, -60px);
+    animation-name: none;
+    animation-duration: 0s;
+    transition: 0s; }
+  .fondoTexto2 {
+    width: 80%;
+    transform: translate(50px, -104px);
+    animation-name: none;
+    animation-duration: 0s;
+    transition: 0s; }
+  .transicionTexto {
+    animation-duration: 1s;
+    transition: 1s; }
   .imgLogos, .imgBorder {
     width: 75%; }
   .formularioContacto {
@@ -798,11 +884,13 @@ h2, h3, h4 {
     color: snow; }
   #estiloFooterNav {
     color: snow; }
-  .footerSecundario li a {
-    /* Estilos para las opciones del menú del footerSecundario */
-    padding: 5px;
-    /* Este padding coloca separación entre los elementos */
-    margin: 20px; } }
+  .footerSecundario ul {
+    padding: 4rem 0;
+    border-radius: 1rem; }
+    .footerSecundario ul li {
+      margin: 2rem 4rem; }
+      .footerSecundario ul li a {
+        font-size: 1.75rem; } }
 
 @media only screen and (max-width: 669px) {
   /** pantallas de celulares optimizando para iphone y samsung comunes */
@@ -907,15 +995,20 @@ h2, h3, h4 {
       border-radius: 0px; }
   .carousel-inner {
     margin: 20px 0 20px 0; }
+  .imgEmpresa p {
+    margin: 1.5rem 0.5rem 5rem 0.5rem; }
   #videoIframe iframe {
     width: 100%; }
   #seccionVideo {
     align-items: stretch; }
     #seccionVideo h2 {
       font-size: 1.25rem; }
+    #seccionVideo iframe {
+      padding: 10px;
+      margin: 10px 0 20px 0; }
   .seccionPrincipalGeneral2 img {
-    margin: 10px 0 20px 0;
-    width: 100%; }
+    margin: 20px 0 20px 0;
+    width: 90%; }
   .seccionPrincipalGeneral2 p {
     width: 75%;
     margin: 50px 5px;
@@ -959,10 +1052,15 @@ h2, h3, h4 {
     width: 90%; }
   .mapaDatos p {
     margin: 2rem; }
-  .AlineacionDatos h3 {
-    margin: 2rem; }
+  .AlineacionDatos {
+    transform: translateY(0px); }
+    .AlineacionDatos h3 {
+      margin: 2rem; }
   .fondoTexto, .fondoTexto2 {
     display: none; }
+  .transicionTexto {
+    animation-name: none;
+    animation-duration: 0s; }
   .formularioContacto {
     /* Formulario en contacto.html */
     width: 300px;
@@ -1020,7 +1118,8 @@ h2, h3, h4 {
   .footerSecundario ul {
     /* Puesta de menú del footer en horizontal y estilos */
     display: grid;
-    place-items: center; }
+    place-items: center;
+    border-radius: 1rem; }
   .footerSecundario li {
     /* Estilos para las opciones del menú del footerSecundario */
     justify-content: center;
